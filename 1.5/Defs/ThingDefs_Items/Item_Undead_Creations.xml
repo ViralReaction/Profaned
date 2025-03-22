@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== "eggs" ================================= -->
+	<ThingDef ParentName="ResourceBase" Name="BotchJob_UndeadCreation" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<recipeMaker>
+			<recipeUsers Inherit="False">
+				<li>BotchJob_ProfaneRitualCircle</li>
+			</recipeUsers>
+			<workSkill>Intellectual</workSkill>
+			<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+			<soundWorking>Recipe_Surgery</soundWorking>
+			<unfinishedThingDef>BotchJob_UnfinishedUndead</unfinishedThingDef>
+		</recipeMaker>
+		<statBases>
+			<MaxHitPoints>1</MaxHitPoints>
+			<MarketValue>1</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Resource/BotchJob_UnfinishedUndead</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<stackLimit>1</stackLimit>
+		<modExtensions>
+			<li Class="Profaned.HatcherExtension">
+				<forcePlayerFaction>true</forcePlayerFaction>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_SkeletonCreation</defName>
+		<label>skeleton</label>
+		<description>Create a skeleton using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>4</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<MedicineHerbal>2</MedicineHerbal>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">40</DankPyon_Bone>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_Skeleton</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_UndeadCatCreation</defName>
+		<label>undead cat</label>
+		<description>Create an undead cat using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>2</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">5</DankPyon_Bone>
+			<MedicineHerbal>1</MedicineHerbal>
+			<Leather_Plain>10</Leather_Plain>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_UndeadCat</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_GhoulCreation</defName>
+		<label>ghoul</label>
+		<description>Create a ghoul using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>20000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAdvanced</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">30</DankPyon_Bone>
+			<MedicineHerbal>3</MedicineHerbal>
+			<Leather_Human>120</Leather_Human>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_Ghoul</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_WraithCreation</defName>
+		<label>wraith</label>
+		<description>Create a wraith using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAdvanced</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<MedicineHerbal>3</MedicineHerbal>
+			<Cloth>100</Cloth>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_Wraith</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_UndeadWargCreation</defName>
+		<label>undead warg</label>
+		<description>Create an undead warg using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>20000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAdvanced</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">30</DankPyon_Bone>
+			<MedicineHerbal>3</MedicineHerbal>
+			<Leather_Wolf>120</Leather_Wolf>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_UndeadWarg</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_UndeadHorseCreation</defName>
+		<label>undead horse</label>
+		<description>Create an undead horse using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAdvanced</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">30</DankPyon_Bone>
+			<MedicineHerbal>3</MedicineHerbal>
+			<Leather_Plain>120</Leather_Plain>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_UndeadHorse</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_SpectralHorseCreation</defName>
+		<label>spectral horse</label>
+		<description>Create a spectral horse using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAdvanced</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<MedicineHerbal>3</MedicineHerbal>
+			<Cloth>100</Cloth>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_SpectralHorse</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_ColossusCreation</defName>
+		<label>undead colossus</label>
+		<description>Create an undead colossus using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>40000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>10</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAlchemy</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">100</DankPyon_Bone>
+			<MedicineHerbal>5</MedicineHerbal>
+			<Leather_Human>300</Leather_Human>
+			<Meat_Human>150</Meat_Human>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_UndeadColossus</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="BotchJob_UndeadCreation">
+		<defName>BotchJob_UndeadDragonCreation</defName>
+		<label>undead dragon</label>
+		<description>Create an undead dragon using a soul gem, a dark practice forbidden by most.</description>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Intellectual>12</Intellectual>
+			</skillRequirements>
+			<researchPrerequisite>BotchJob_ProfanedAlchemy</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<BotchJob_SoulGem>3</BotchJob_SoulGem>
+			<DankPyon_Bone MayRequire="DankPyon.Medieval.Overhaul">300</DankPyon_Bone>
+			<MedicineHerbal>10</MedicineHerbal>
+			<HardScale MayRequire="onyxae.dragonsdescent">400</HardScale>
+			<DragonHorn MayRequire="onyxae.dragonsdescent">1</DragonHorn>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>0</hatcherDaystoHatch>
+				<hatcherPawn>BotchJob_UndeadDragon</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+</Defs>

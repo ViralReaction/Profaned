@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+<RecipeDef>
+		<defName>BotchJob_ButcherUndead</defName>
+		<label>harvest undead creature</label>
+		<description>Harvest the remains of an undead creature for useful crafting materials.</description>
+		<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>
+		<jobString>Harvesting remains.</jobString>
+		<workAmount>450</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+		<workSkill>Cooking</workSkill>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+		<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<interruptIfIngredientIsRotting>true</interruptIfIngredientIsRotting>
+		<uiIconThing>BotchJob_TaintedBone</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>BotchJob_CorpsesUndead</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<categories>
+				<li>BotchJob_CorpsesUndead</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>BotchJob_CorpsesUndead</li>
+			</categories>
+		</defaultIngredientFilter>
+		<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+	</RecipeDef>
+  
+  
+	<RecipeDef>
+		<defName>BotchJob_ExtractSoul</defName>
+		<label>extract soul</label>
+		<description>Perform a profane ritual on a recently deceased human, extracting their fading soul and trapping it within a soul gem.\n\nThis also yields some human meat and leather, but not as much regular butchery.</description>
+		<workerCounterClass>RecipeWorkerCounter_ButcherAnimals</workerCounterClass>
+		<jobString>Extracting soul.</jobString>
+		<workAmount>1000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Intellectual</workSkill>
+		<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<interruptIfIngredientIsRotting>true</interruptIfIngredientIsRotting>
+		<uiIconThing>BotchJob_SoulGem</uiIconThing>
+		<autoStripCorpses>false</autoStripCorpses>
+		<skillRequirements>
+			<Intellectual>8</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>CorpsesHumanlike</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowRotten</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>CorpsesHumanlike</li>
+			</categories>
+		</defaultIngredientFilter>
+		<products>
+			<BotchJob_SoulGem>1</BotchJob_SoulGem>
+			<Meat_Human>30</Meat_Human>
+			<Leather_Human>30</Leather_Human>
+		</products>
+		<researchPrerequisite>BotchJob_ProfanedAdvanced</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef MayRequire="DankPyon.Medieval.Overhaul">
+		<defName>BotchJob_MakeBonesfromMOBones</defName>
+		<label>create tainted bones from regular bones</label>
+		<description>Create tainted bones from regular bones via profane ritual.</description>
+		<jobString>Creating tainted bones.</jobString>
+		<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workAmount>2000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<skillRequirements>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>DankPyon_Bone</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>DankPyon_Bone</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BotchJob_TaintedBone>5</BotchJob_TaintedBone>
+		</products>
+		<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>BotchJob_MakeBonesfromSkull</defName>
+		<label>create tainted bones from a human skull</label>
+		<description>Create tainted bones from a human skull via profane ritual.</description>
+		<jobString>Creating tainted bones.</jobString>
+		<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workAmount>2000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<skillRequirements>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Skull</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Skull</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BotchJob_TaintedBone>5</BotchJob_TaintedBone>
+		</products>
+		<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+	</RecipeDef>
+  
+	<RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_MakeBloodfromHemogen</defName>
+		<label>create corrupted blood from hemogen</label>
+		<description>Create corrupted blood from hemogen via profane ritual.</description>
+		<jobString>Creating corrupted blood.</jobString>
+		<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workAmount>2000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<skillRequirements>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HemogenPack</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>HemogenPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BotchJob_CorruptedBlood>1</BotchJob_CorruptedBlood>
+		</products>
+		<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+	</RecipeDef>
+ 
+	<RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_MakeBloodfromHemogenBulk</defName>
+		<label>create corrupted blood from hemogen x5</label>
+		<description>Create corrupted blood from hemogen via profane ritual.</description>
+		<jobString>Creating corrupted blood.</jobString>
+		<effectWorking>BotchJob_RitualCircleEffect</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workAmount>4000</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<skillRequirements>
+			<Intellectual>4</Intellectual>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>HemogenPack</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>HemogenPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BotchJob_CorruptedBlood>5</BotchJob_CorruptedBlood>
+		</products>
+		<researchPrerequisite>BotchJob_ProfanedBasics</researchPrerequisite>
+	</RecipeDef>
+</Defs>

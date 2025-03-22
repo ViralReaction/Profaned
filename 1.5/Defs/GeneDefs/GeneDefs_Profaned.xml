@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Genes =================== -->
+ 	<GeneDef MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFlesh</defName>
+		<label>rotting flesh</label>
+		<labelShortAdj>rotting</labelShortAdj>
+		<description>Rotting flesh and exposed bone makes this person very unpleasant to be around.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>3</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>400</displayOrderInCategory>
+		<iconPath>UI/Icons/Genes/BotchJob_RottingFleshIcon</iconPath>
+		<iconColor>(1, 1, 1)</iconColor>
+		<selectionWeight>1.5</selectionWeight>
+		<exclusionTags>
+			<li>Beauty</li>
+		</exclusionTags>
+		<statOffsets>
+			<PawnBeauty>-2</PawnBeauty>
+		</statOffsets>
+		<forcedHeadTypes>
+			<li>BotchJob_RottingFleshHeadMaleAverage</li>
+			<li>BotchJob_RottingFleshHeadMaleAverage2</li>
+			<li>BotchJob_RottingFleshHeadMaleAverage3</li>
+			<li>BotchJob_RottingFleshHeadMaleNarrow</li>
+			<li>BotchJob_RottingFleshHeadMaleNarrow2</li>
+			<li>BotchJob_RottingFleshHeadMaleNarrow3</li>
+			<li>BotchJob_RottingFleshHeadFemaleAverage</li>
+			<li>BotchJob_RottingFleshHeadFemaleAverage2</li>
+			<li>BotchJob_RottingFleshHeadFemaleAverage3</li>
+			<li>BotchJob_RottingFleshHeadFemaleNarrow</li>
+			<li>BotchJob_RottingFleshHeadFemaleNarrow2</li>
+			<li>BotchJob_RottingFleshHeadFemaleNarrow3</li>
+		</forcedHeadTypes>
+		<beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>NoBeard</li>
+			</tags>
+		</beardTagFilter>
+		<fur>BotchJob_RottingFlesh</fur>
+		<tattoosVisible>false</tattoosVisible>
+		<skinIsHairColor>false</skinIsHairColor>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<useSkinColorForFur>true</useSkinColorForFur>
+				<useMaskForFur>true</useMaskForFur>
+				<furHidesBody>true</furHidesBody>
+				<customBloodThingDef>BotchJob_Filth_Undead</customBloodThingDef>
+				<customWoundsFromFleshtype>BotchJob_UndeadFlesh</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_SkeletalBody</defName>
+		<label>skeletal form</label>
+		<labelShortAdj>skeletal</labelShortAdj>
+		<description>This individual's skeletal body is unnerving to most and is vulnerable to blunt damage.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>3</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>400</displayOrderInCategory>
+		<iconPath>UI/Icons/Genes/BotchJob_SkeletalBodyIcon</iconPath>
+		<iconColor>(1, 1, 1)</iconColor>
+		<selectionWeight>0.3</selectionWeight>
+		<exclusionTags>
+			<li>Beauty</li>
+		</exclusionTags>
+		<statOffsets>
+			<PawnBeauty>-1</PawnBeauty>
+			<ArmorRating_Blunt>-0.2</ArmorRating_Blunt>
+		</statOffsets>
+		<forcedHeadTypes>
+			<li>BotchJob_RottingFleshHeadMaleAverage2</li>
+			<li>BotchJob_RottingFleshHeadMaleNarrow</li>
+			<li>BotchJob_RottingFleshHeadFemaleAverage2</li>
+			<li>BotchJob_RottingFleshHeadFemaleNarrow</li>
+		</forcedHeadTypes>
+		<beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>NoBeard</li>
+			</tags>
+		</beardTagFilter>
+		<fur>BotchJob_SkeletalBody</fur>
+		<tattoosVisible>false</tattoosVisible>
+		<skinIsHairColor>false</skinIsHairColor>
+		<renderNodeProperties>
+			<li>
+				<nodeClass>PawnRenderNode_Fur</nodeClass>
+				<workerClass>PawnRenderNodeWorker_Fur</workerClass>
+				<baseLayer>5</baseLayer>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Skin</colorType>
+				<parentTagDef>Body</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<useSkinColorForFur>true</useSkinColorForFur>
+				<useMaskForFur>true</useMaskForFur>
+				<furHidesBody>true</furHidesBody>
+				<customBloodThingDef>BotchJob_Filth_Bone</customBloodThingDef>
+				<customWoundsFromFleshtype>BotchJob_UndeadFlesh</customWoundsFromFleshtype>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_UndeadPsysiology</defName>
+		<label>undead psysiology</label>
+		<description>This individual's undead body renders them immune to most diseases, toxins and the effects of aging.\n\nThey also do not require sleep and can eat almost anything without ill effects.</description>
+		<iconPath>UI/Icons/Genes/BotchJob_UndeadPhysiologyIcon</iconPath>
+		<displayCategory>Miscellaneous</displayCategory>
+		<exclusionTags>
+			<li>Immunity</li>
+			<li>ToxicEnvironmentResistance</li>
+			<li>ToxResistance</li>
+			<li>Sleep</li>
+			<li>DiseaseFree</li>
+			<li>PerfectImmunity</li>
+		</exclusionTags>
+		<displayOrderInCategory>0</displayOrderInCategory>
+		<biostatCpx>5</biostatCpx>
+		<biostatMet>-9</biostatMet>
+		<makeImmuneTo>
+			<li>Flu</li>
+			<li>Malaria</li>
+			<li>SleepingSickness</li>
+			<li>Plague</li>
+			<li>WoundInfection</li>
+			<li>LungRot</li>
+		</makeImmuneTo>
+		<hediffGiversCannotGive>
+			<li>Carcinoma</li>
+			<li>HeartAttack</li>
+			<li>BadBack</li>
+			<li>Frail</li>
+			<li>Cataract</li>
+			<li>Dementia</li>
+			<li>Alzheimers</li>
+			<li>Asthma</li>
+			<li>Heatstroke</li>
+			<li>HeartArteryBlockage</li>
+		</hediffGiversCannotGive>
+		<disablesNeeds>
+			<li>Rest</li>
+		</disablesNeeds>
+		<statOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<ToxicResistance>1</ToxicResistance>
+		</statOffsets>
+		<dontMindRawFood>true</dontMindRawFood>
+		<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+		<statFactors>
+			<RawNutritionFactor>1.5</RawNutritionFactor>
+		</statFactors>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_UnnaturalColdResistance</defName>
+		<label>unnatural cold resistance</label>
+		<description>This individual's undead body makes them almost immune to the effects of cold.</description>
+		<iconPath>UI/Icons/Genes/BotchJob_UnnaturalColdResistanceIcon</iconPath>
+		<displayCategory>ResistanceAndWeakness</displayCategory>
+		<exclusionTags>
+			<li>MinTemperature</li>
+		</exclusionTags>
+		<displayOrderInCategory>110</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-4</biostatMet>
+		<statOffsets>
+			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+		</statOffsets>
+		<hediffGiversCannotGive>
+			<li>Hypothermia</li>
+		</hediffGiversCannotGive>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_UndeadHeatWeakness</defName>
+		<label>fire vulnerability</label>
+		<description>This individual's partially decomposed body doesn't fare well in heat and is highly vulnerable to fire damage.</description>
+		<iconPath>UI/Icons/Genes/BotchJob_UndeadHeatWeaknessIcon</iconPath>
+		<displayCategory>ResistanceAndWeakness</displayCategory>
+		<exclusionTags>
+			<li>FireDamage</li>
+			<li>MaxTemperature</li>
+		</exclusionTags>
+		<displayOrderInCategory>110</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>4</biostatMet>
+		<statOffsets>
+			<ComfyTemperatureMax>-10</ComfyTemperatureMax>
+		</statOffsets>
+		<damageFactors>
+			<Flame>3</Flame>
+		</damageFactors>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_UndeadPainlessness</defName>
+		<label>undead painlessness</label>
+		<exclusionTags>
+			<li>Pain</li>
+		</exclusionTags>
+		<description>This individual's partially decomposed body lacks pain receptors and nerve endings, because of this they cannot feel pain.\n\nWhilst this does have advantages, the absence of pain often results in a lack of self preservation.</description>
+		<iconPath>UI/Icons/Genes/BotchJob_UndeadPainlessnessIcon</iconPath>
+		<displayCategory>Pain</displayCategory>
+		<displayOrderInCategory>110</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<painFactor>0</painFactor>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_DecomposingBody</defName>
+		<label>decomposing body</label>
+		<description>This individual's decomposing body renders them slow moving with poor manipulation. They also bleed less due to having thick, coagulated blood</description>
+		<iconPath>UI/Icons/Genes/BotchJob_DecomposingBodyIcon</iconPath>
+		<displayCategory>Miscellaneous</displayCategory>
+		<geneClass>Gene_Clotting</geneClass>
+		<statOffsets>
+			<MoveSpeed>-0.3</MoveSpeed>
+		</statOffsets>
+		<capMods>
+			<li>
+				<capacity>Manipulation</capacity>
+				<postFactor>0.6</postFactor>
+			</li>
+		</capMods>
+		<displayOrderInCategory>110</displayOrderInCategory>
+		<biostatCpx>4</biostatCpx>
+		<biostatMet>4</biostatMet>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_DaylightAversion</defName>
+		<label>aversion to daylight</label>
+		<description>Due to this individual's undead nature, they are weaker and slower when in direct sunlight but slightly stronger when not. They prefer to be active at night.</description>
+		<iconPath>UI/Icons/Genes/BotchJob_DaylightAversionIcon</iconPath>
+		<exclusionTags>
+			<li>UVSensitivity</li>
+		</exclusionTags>
+		<displayCategory>ResistanceAndWeakness</displayCategory>
+		<statOffsets>
+			<IncomingDamageFactor>-0.1</IncomingDamageFactor>
+		</statOffsets>
+		<dislikesSunlight>true</dislikesSunlight>
+		<conditionalStatAffecters>
+			<li Class="ConditionalStatAffecter_InSunlight">
+				<statFactors>
+					<IncomingDamageFactor>1.5</IncomingDamageFactor>
+					<MoveSpeed>0.8</MoveSpeed>
+					<AimingDelayFactor>1.2</AimingDelayFactor>
+					<MeleeHitChance>0.8</MeleeHitChance>
+				</statFactors>
+			</li>
+		</conditionalStatAffecters>
+		<displayOrderInCategory>110</displayOrderInCategory>
+		<biostatCpx>5</biostatCpx>
+		<biostatMet>5</biostatMet>
+	</GeneDef>
+
+	<GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_Cursebearer</defName>
+		<label>cursebearer</label>
+		<labelShortAdj>cursebearer</labelShortAdj>
+		<description>Cursebearers are able bestow their curse onto others, turning them into their own xenotype.</description>
+		<iconPath>UI/Icons/Misc/BotchJob_BestowCurseIcon</iconPath>
+		<displayCategory>Miscellaneous</displayCategory>
+		<abilities>
+			<li>BotchJob_BestowCurse</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>BotchJob_BestowCurse</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatCpx>3</biostatCpx>
+	</GeneDef>
+
+	<EffecterDef>
+		<defName>BotchJob_BestowCurseEffect</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<scale>0.3~0.7</scale>
+				<ticksBetweenMotes>15</ticksBetweenMotes>
+				<positionLerpFactor>0.6</positionLerpFactor>
+				<positionRadius>0.6</positionRadius>
+				<moteDef>Mote_FoodBitMeat</moteDef>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+				<fleckDef>BotchJob_BestowCurseMote</fleckDef>
+				<ticksBetweenMotes>40</ticksBetweenMotes>
+				<scale>1</scale>
+				<positionOffset>(0, 0, 0.38)</positionOffset>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<FleckDef ParentName="FleckBase">
+		<defName>BotchJob_BestowCurseMote</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>0.1</solidTime>
+		<fadeInTime>0.06</fadeInTime>
+		<fadeOutTime>0.25</fadeOutTime>
+		<graphicData>
+			<texPath>Things/Mote/BotchJob_BestowCurseMote</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>(0.6, 0.6)</drawSize>
+		</graphicData>
+	</FleckDef>
+
+</Defs>

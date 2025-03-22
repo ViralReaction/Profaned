@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ToolCapacityDef>
+		<defName>BotchJob_RotStab</defName>
+		<label>rot stab</label>
+	</ToolCapacityDef>
+
+	<ToolCapacityDef>
+		<defName>BotchJob_RotCut</defName>
+		<label>rot cut</label>
+	</ToolCapacityDef>
+
+</Defs>

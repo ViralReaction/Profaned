@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Xenotype =================== -->
+	<XenotypeDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_ProfanedXenotype</defName>
+		<label>profaned</label>
+		<description>Cursed with undeath, the profaned exist in a state between life and death. Their partially decayed bodies render them slow moving with poor manipulation. They are also weaker in daylight, infertile, vulnerable to fire and unsurprisingly, the sight and stench of rotting flesh and exposed bone makes them extremely unpleasant to be around.\n\nBeing undead does have its advantages however as they require less nutrition and don't have to sleep, are highly resistant to cold, immune to all diseases and toxins, feel no pain and cannot die through natural means.</description>
+		<descriptionShort>Profaned are slow moving with poor manipulation. They are also infertile, weak to fire and unpleasant to be around.\n\nConversely, they require less nutrition and don't have to sleep, are highly resistant to cold, immune to all diseases and toxins, feel no pain and cannot die through natural means.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/BotchJob_ProfanedXenotypeIcon</iconPath>
+		<inheritable>false</inheritable>
+		<nameMaker>NamerPersonWaster</nameMaker>
+		<chanceToUseNameMaker>0.75</chanceToUseNameMaker>
+		<genes>
+			<li Mayrequire="OskarPotocki.VanillaFactionsExpanded.Core">BotchJob_RottingFlesh</li>
+			<li Mayrequire="OskarPotocki.VanillaFactionsExpanded.Core">BotchJob_SkeletalBody</li>
+			<li>BotchJob_UndeadPsysiology</li>
+			<li>BotchJob_UnnaturalColdResistance</li>
+			<li>BotchJob_UndeadHeatWeakness</li>
+			<li>BotchJob_UndeadPainlessness</li>
+			<li>BotchJob_DecomposingBody</li>
+			<li>BotchJob_DaylightAversion</li>
+			<li>Skin_SheerWhite</li>
+			<li>Sterile</li>
+			<li>Hair_Gray</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_ProfanedCursebearerXenotype</defName>
+		<label>profaned cursebearer</label>
+		<description>Cursed with undeath, the profaned exist in a state between life and death. Their partially decayed bodies render them slow moving with poor manipulation. They are also weaker in daylight, infertile, vulnerable to fire and unsurprisingly, the sight and stench of rotting flesh and exposed bone makes them extremely unpleasant to be around.\n\nBeing undead does have its advantages however as they require less nutrition and don't have to sleep, are highly resistant to cold, immune to all diseases and toxins, feel no pain and cannot die through natural means.\n\nThis individual is a cursebearer and is able to bestow their curse onto others, turning them into their own xenotype.</description>
+		<descriptionShort>Profaned are slow moving with poor manipulation. They are also infertile, weak to fire and unpleasant to be around.\n\nConversely, they require less nutrition and don't have to sleep, are highly resistant to cold, immune to all diseases and toxins, feel no pain and cannot die through natural means.\n\nThis individual is a cursebearer and is able to bestow their curse onto others, turning them into their own xenotype.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/BotchJob_CursebearerXenotypeIcon</iconPath>
+		<inheritable>false</inheritable>
+		<nameMaker>NamerPersonWaster</nameMaker>
+		<chanceToUseNameMaker>0.75</chanceToUseNameMaker>
+		<genes>
+			<li Mayrequire="OskarPotocki.VanillaFactionsExpanded.Core">BotchJob_RottingFlesh</li>
+			<li>BotchJob_UndeadPsysiology</li>
+			<li>BotchJob_UnnaturalColdResistance</li>
+			<li>BotchJob_UndeadHeatWeakness</li>
+			<li>BotchJob_UndeadPainlessness</li>
+			<li>BotchJob_DecomposingBody</li>
+			<li>BotchJob_DaylightAversion</li>
+			<li>Sterile</li>
+			<li>Skin_SheerWhite</li>
+			<li>Hair_Gray</li>
+			<li>BotchJob_Cursebearer</li>
+		</genes>
+	</XenotypeDef>
+
+</Defs>

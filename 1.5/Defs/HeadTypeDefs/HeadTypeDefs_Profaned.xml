@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Heads =================== -->
+	<HeadTypeDef Name="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<hairMeshSize>(1.5, 1.5)</hairMeshSize>
+		<beardMeshSize>(1.5, 1.5)</beardMeshSize>
+		<modExtensions>
+			<li Class="VFECore.HeadExtension">
+				<forcedHeadShader>CutoutComplex</forcedHeadShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<HeadTypeDef Name="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core" Abstract="True">
+		<randomChosen>false</randomChosen>
+		<hairMeshSize>(1.3, 1.5)</hairMeshSize>
+		<beardMeshSize>(1.2, 1.5)</beardMeshSize>
+		<beardOffset>(0, 0, -0.05)</beardOffset>
+		<beardOffsetXEast>-0.05</beardOffsetXEast>
+		<eyeOffsetEastWest>(0.10, 0, 0.17)</eyeOffsetEastWest>
+		<narrow>true</narrow>
+		<modExtensions>
+			<li Class="VFECore.HeadExtension">
+				<forcedHeadShader>CutoutComplex</forcedHeadShader>
+			</li>
+		</modExtensions>
+	</HeadTypeDef>
+
+	<!-- ==================== Male =================== -->
+	<HeadTypeDef ParentName="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadMaleAverage</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Male_Average_RottingFlesh</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadMaleAverage2</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Male_Average_RottingFlesh2</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadMaleAverage3</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Male_Average_RottingFlesh3</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadMaleNarrow</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Male_Narrow_RottingFlesh</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadMaleNarrow2</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Male_Narrow_RottingFlesh2</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadMaleNarrow3</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Male_Narrow_RottingFlesh3</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+
+	<!-- ==================== Female =================== -->
+	<HeadTypeDef ParentName="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadFemaleAverage</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Female_Average_RottingFlesh</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadFemaleAverage2</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Female_Average_RottingFlesh2</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshAverageBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadFemaleAverage3</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Female_Average_RottingFlesh3</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadFemaleNarrow</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Female_Narrow_RottingFlesh</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadFemaleNarrow2</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Female_Narrow_RottingFlesh2</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+
+	<HeadTypeDef ParentName="BotchJob_RottingFleshNarrowBase" MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFleshHeadFemaleNarrow3</defName>
+		<graphicPath>Things/Pawn/Humanlike/Heads/RottingFlesh/Female_Narrow_RottingFlesh3</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+
+</Defs>

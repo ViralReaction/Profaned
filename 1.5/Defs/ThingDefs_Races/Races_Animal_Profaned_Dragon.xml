@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== Dragon ================================= -->
+	<ThingDef ParentName="BotchJob_UndeadAnimalBase">
+		<defName>BotchJob_UndeadDragon</defName>
+		<label>undead dragon</label>
+		<description>An undead dragon, just as dangerous and terrifying as its living counterpart.\n\nIts bite and fiery breath are toxic and it is able to expell several grotesque, fleshy masses to bombard an area from afar.</description>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<armorPenetration>0.2</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<armorPenetration>0.2</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>toxic bite</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>32</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>3.0</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>4</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>20</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<thinkTreeMain MayRequire="onyxae.dragonsdescent">Dragon</thinkTreeMain>
+			<thinkTreeConstant MayRequire="onyxae.dragonsdescent">DragonConstant</thinkTreeConstant>
+			<overrideShouldHaveAbilityTracker MayRequire="onyxae.dragonsdescent">true</overrideShouldHaveAbilityTracker>
+			<hediffGiverSets MayRequire="onyxae.dragonsdescent">
+				<li>OrganicDragon</li>
+			</hediffGiverSets>
+			<packAnimal>true</packAnimal>
+			<herdAnimal>false</herdAnimal>
+			<body MayRequire="onyxae.dragonsdescent">QuadrupedeAnimalWithClawsDragon</body>
+			<baseBodySize>5</baseBodySize>
+			<baseHealthScale>12</baseHealthScale>
+			<trainability>Advanced</trainability>
+			<wildness>0.99</wildness>
+			<manhunterOnTameFailChance>1</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+			<wildBiomes Inherit="False"/>
+			<maxPreyBodySize>4</maxPreyBodySize>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<statBases>
+			<MoveSpeed>5</MoveSpeed>
+			<ComfyTemperatureMin>-150</ComfyTemperatureMin>
+			<ComfyTemperatureMax>200</ComfyTemperatureMax>
+			<ArmorRating_Blunt>1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<MarketValue>6000</MarketValue>
+		</statBases>
+		<butcherProducts>
+			<BotchJob_TaintedBone>15</BotchJob_TaintedBone>
+			<BotchJob_CorruptedBlood>8</BotchJob_CorruptedBlood>
+			<BotchJob_ColossusHeart>1</BotchJob_ColossusHeart>
+		</butcherProducts>
+		<comps>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.CompProperties_ShieldBubble">
+				<compClass>VFECore.Abilities.CompAbilities</compClass>
+				<blockRangedAttack>False</blockRangedAttack>
+				<blockMeleeAttack>False</blockMeleeAttack>
+				<showAlways>True</showAlways>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>toxic dragon breath</label>
+						<description>Spew forth toxic, scorching dragon breath over an area.</description>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>90</cooldownTime>
+							</li>
+						</comps>
+					</li>
+					<li>
+						<label>spew putrid mass</label>
+						<description>Expell several grotesque fleshy masses which burst on impact, spreading rot stink over an area.</description>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>120</cooldownTime>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<verbs>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<label>toxic dragon breath</label>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>true</onlyManualCast>
+				<defaultProjectile>BotchJob_DragonToxicBreath</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>1</warmupTime>
+				<range>15</range>
+				<soundCast>BotchJob_ProfanedStaffCast</soundCast>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<commandIcon>UI/Icons/Misc/BotchJob_ToxicflameSurgeIcon</commandIcon>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+				<verbClass>Verb_Shoot</verbClass>
+				<label>spew putrid mass</label>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>BotchJob_PutridMass</defaultProjectile>
+				<forcedMissRadius>3</forcedMissRadius>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<warmupTime>4</warmupTime>
+				<range>35</range>
+				<minRange>15</minRange>
+				<aimingTargetMote>BotchJob_ColossusSmashTarget</aimingTargetMote>
+				<soundCast>CocoonDestroyed</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<commandIcon>UI/Icons/Misc/BotchJob_PutridMassIcon</commandIcon>
+			</li>
+		</verbs>
+		<modExtensions>
+			<li MayRequire="onyxae.dragonsdescent" Class="DD.SettingControlledExtension_AnimalBiome"/>
+			<li MayRequire="onyxae.dragonsdescent" Class="DD.DrugTargetExtension"/>
+			<li MayRequire="onyxae.dragonsdescent" Class="DD.RitualTargetExtension"/>
+			<li MayRequire="onyxae.dragonsdescent" Class="DD.WingedFlyerExtension">
+				<flightSpeed>14</flightSpeed>
+				<flyingGraphicData Class="DD.AnimationGraphicData">
+					<texPath>Things/Pawn/Animal/BotchJob_UndeadDragon/Flying</texPath>
+					<graphicClass>DD.Graphic_Animation</graphicClass>
+					<drawSize>6</drawSize>
+					<ticksPerFrame>25</ticksPerFrame>
+					<shadowData>
+						<volume>(2, 1.5, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</flyingGraphicData>
+			</li>
+			<li MayRequire="onyxae.dragonsdescent" Class="DD.CarryCapacityExtension">
+				<constant>360</constant>
+				<offset>100</offset>
+				<factor>2.4</factor>
+				<cap>1~1000</cap>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>BotchJob_UndeadDragon</defName>
+		<label>undead dragon</label>
+		<race>BotchJob_UndeadDragon</race>
+		<combatPower>1000</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_UndeadDragon/BotchJob_UndeadDragon</texPath>
+					<drawSize>5</drawSize>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_UndeadDragon/BotchJob_UndeadDragon</texPath>
+					<drawSize>5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<modExtensions>
+			<li MayRequire="onyxae.dragonsdescent" Class="DD.IncidentSpawnConditionExtension">
+				<temperature>-50~80</temperature>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.Abilities.PawnKindAbilityExtension">
+				<giveAbilities>
+					<li MayRequire="onyxae.dragonsdescent">DD_DragonJump</li>
+					<li MayRequire="onyxae.dragonsdescent">DD_DraconicFlight</li>
+				</giveAbilities>
+				<giveRandomAbilities>false</giveRandomAbilities>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+</Defs>

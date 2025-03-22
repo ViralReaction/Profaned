@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FleshTypeDef>
+		<defName>BotchJob_UndeadFlesh</defName>
+		<corpseCategory>BotchJob_CorpsesUndead</corpseCategory>
+		<damageEffecter>Damage_HitInsect</damageEffecter>
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/BotchJob_UndeadWoundA</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/BotchJob_UndeadWoundB</texture>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/BotchJob_UndeadWoundC</texture>
+			</li>
+		</genericWounds>
+	</FleshTypeDef>
+
+</Defs>

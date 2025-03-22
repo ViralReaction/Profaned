@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<KCSG.StructureLayoutDef>
+		<defName>BotchJob_DarkCrypt</defName>
+		<spawnConduits>false</spawnConduits>
+		<layouts>
+			<li>
+				<li>.,Wall_BlocksSlate,Wall_BlocksSlate,Door_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,Door_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,.</li>
+				<li>.,Wall_BlocksSlate,.,.,.,.,.,.,Wall_BlocksSlate,.</li>
+				<li>Wall_BlocksSlate,Wall_BlocksSlate,.,.,.,.,.,.,Wall_BlocksSlate,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,.,BotchJob_ProfanedTable_BlocksSlate,.,BotchJob_ProfanedChair_BlocksSlate_West,.,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,BotchJob_ProfanedChair_BlocksSlate_East,.,.,.,.,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,.,.,.,.,.,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,Sarcophagus_BlocksSlate_West,.,.,.,Sarcophagus_BlocksSlate_West,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,.,.,.,.,.,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,Sarcophagus_BlocksSlate_West,.,.,.,Sarcophagus_BlocksSlate_West,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,.,.,.,.,.,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,Sarcophagus_BlocksSlate_West,.,.,.,Sarcophagus_BlocksSlate_West,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,.,.,.,.,.,.,.,.,Wall_BlocksSlate</li>
+				<li>Wall_BlocksSlate,Wall_BlocksSlate,.,.,.,.,.,.,Wall_BlocksSlate,Wall_BlocksSlate</li>
+				<li>.,Wall_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,Wall_BlocksSlate,.</li>
+			</li>
+			<li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,BotchJob_ProfanedLantern,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+				<li>.,.,.,.,.,.,.,.,.,.</li>
+			</li>
+		</layouts>
+		<roofGrid>
+			<li>.,1,1,1,1,1,1,1,1,.</li>
+			<li>.,1,1,1,1,1,1,1,1,.</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>1,1,1,1,1,1,1,1,1,1</li>
+			<li>.,1,1,1,1,1,1,1,1,.</li>
+		</roofGrid>
+		<terrainGrid>
+			<li>.,.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,.</li>
+			<li>.,.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,.</li>
+			<li>.,.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,.</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>FlagstoneSandstone,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>FlagstoneSandstone,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate</li>
+			<li>.,.,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,ProfanedTileSlate,.</li>
+			<li>.,.,.,.,.,.,.,.,.,.</li>
+		</terrainGrid>
+		<forceGenerateRoof>true</forceGenerateRoof>
+		<modRequirements>
+			<li>botchjob.profaned</li>
+		</modRequirements>
+	</KCSG.StructureLayoutDef>
+
+	<KCSG.SymbolDef>
+		<defName>BotchJob_ProfanedTable_BlocksSlate</defName>
+		<thing>BotchJob_ProfanedTable</thing>
+		<stuff>BlocksSlate</stuff>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>BotchJob_ProfanedChair_BlocksSlate_West</defName>
+		<thing>BotchJob_ProfanedChair</thing>
+		<stuff>BlocksSlate</stuff>
+		<rotation>West</rotation>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>BotchJob_ProfanedChair_BlocksSlate_East</defName>
+		<thing>BotchJob_ProfanedChair</thing>
+		<stuff>BlocksSlate</stuff>
+		<rotation>East</rotation>
+	</KCSG.SymbolDef>
+
+	<KCSG.SymbolDef>
+		<defName>BotchJob_ProfanedLantern</defName>
+		<thing>BotchJob_ProfanedLantern</thing>
+	</KCSG.SymbolDef>
+
+</Defs>

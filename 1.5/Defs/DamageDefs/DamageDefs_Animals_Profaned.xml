@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef>
+		<defName>BotchJob_ColossusSmash</defName>
+		<label>colossus smash</label>
+		<canInterruptJobs>true</canInterruptJobs>
+		<makesBlood>true</makesBlood>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<soundExplosion>ThumpCannon_Impact</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been killed by a colossus smash.</deathMessage>
+		<hediff>Shredded</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>40</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<buildingDamageFactorImpassable>3</buildingDamageFactorImpassable>
+		<buildingDamageFactorPassable>3</buildingDamageFactorPassable>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(0.87, 0.66, 0.47)</explosionColorCenter>
+		<explosionColorEdge>(0.95, 0.69, 0.45)</explosionColorEdge>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+	</DamageDef>
+
+	<DamageDef ParentName="Flame">
+		<defName>BotchJob_DragonToxicBreathDamage</defName>
+		<additionalHediffs>
+			<li>
+				<hediff>ToxicBuildup</hediff>
+				<severityPerDamageDealt>0.03</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_BoneImpact</defName>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<label>bone</label>
+		<hasForcefulImpact>true</hasForcefulImpact>
+		<makesBlood>true</makesBlood>
+		<canInterruptJobs>true</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<deathMessage>{0} has been bonked to death.</deathMessage>
+		<hediff>Crush</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>15</defaultDamage>
+		<soundExplosion>Interact_BeatFire</soundExplosion>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionCellFleck>ShotHit_Dirt</explosionCellFleck>
+		<explosionColorCenter>(0.2, 0.6, 0.6)</explosionColorCenter>
+		<explosionColorEdge>(0.2, 0.6, 0.6)</explosionColorEdge>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_WraithClawBlast</defName>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<label>wraith claw blast</label>
+		<hasForcefulImpact>false</hasForcefulImpact>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<deathMessage>{0} has been killed by a wraith claw.</deathMessage>
+		<hediff>Shredded</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>15</defaultDamage>
+		<soundExplosion>Interact_BeatFire</soundExplosion>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionCellFleck>AirPuff</explosionCellFleck>
+		<explosionColorCenter>(0.2, 0.6, 0.6)</explosionColorCenter>
+		<explosionColorEdge>(0.2, 0.6, 0.6)</explosionColorEdge>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+	</DamageDef>
+
+</Defs>

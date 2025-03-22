@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef>
+		<defName>BotchJob_RotStabDamage</defName>
+		<label>rot stab</label>
+		<workerClass>DamageWorker_Stab</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been stabbed to death.</deathMessage>
+		<hediff>Stab</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+		<overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+		<additionalHediffs>
+			<li>
+				<hediff>LungRotExposure</hediff>
+				<severityPerDamageDealt>0.005</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+	</DamageDef>
+  
+	<DamageDef ParentName="CutBase">
+		<defName>BotchJob_RotCutDamage</defName>
+		<label>rot cut</label>
+		<additionalHediffs>
+			<li>
+				<hediff>LungRotExposure</hediff>
+				<severityPerDamageDealt>0.005</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_RotArrow</defName>
+		<label>rot arrow</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been punctured to death.</deathMessage>
+		<hediff>Stab</hediff>
+		<hediffSolid>Crack</hediffSolid>
+		<impactSoundType>Slice</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+		<additionalHediffs>
+			<li>
+				<hediff>LungRotExposure</hediff>
+				<severityPerDamageDealt>0.008</severityPerDamageDealt>
+				<victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_GraspingDeadDamage</defName>
+		<label>grasping dead</label>
+		<canInterruptJobs>true</canInterruptJobs>
+		<makesBlood>true</makesBlood>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<soundExplosion>BotchJob_GraspingDead</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been killed by grasping dead.</deathMessage>
+		<hediff>Shredded</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>34</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(0.6, 0.9, 0.9)</explosionColorCenter>
+		<explosionColorEdge>(0.6, 0.9, 0.9)</explosionColorEdge>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<additionalHediffs>
+			<li>
+				<hediff>BotchJob_GraspingDeadSlow</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_IceShardsDamage</defName>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<label>ice shard</label>
+		<hasForcefulImpact>true</hasForcefulImpact>
+		<makesBlood>true</makesBlood>
+		<canInterruptJobs>true</canInterruptJobs>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<deathMessage>{0} has been killed by ice spikes.</deathMessage>
+		<hediff>Shredded</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>12</defaultDamage>
+		<soundExplosion>BotchJob_IceShardsImpact</soundExplosion>
+		<defaultArmorPenetration>0.2</defaultArmorPenetration>
+		<explosionCellFleck>AirPuff</explosionCellFleck>
+		<explosionColorCenter>(0.2, 0.6, 0.8)</explosionColorCenter>
+		<explosionColorEdge>(0.2, 0.6, 0.8)</explosionColorEdge>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<additionalHediffs>
+			<li>
+				<hediff>Hypothermia</hediff>
+				<severityPerDamageDealt>0.003</severityPerDamageDealt>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_AbyssalDamage</defName>
+		<label>abyssal trauma</label>
+		<canInterruptJobs>true</canInterruptJobs>
+		<makesBlood>false</makesBlood>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<soundExplosion>Interact_BeatFire</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been killed by an abyssal blast.</deathMessage>
+		<hediff>Crush</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>20</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(0.3, 0.3, 0.3)</explosionColorCenter>
+		<explosionColorEdge>(0.3, 0.3, 0.3)</explosionColorEdge>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<additionalHediffs>
+			<li>
+				<hediff>BotchJob_AbyssalTerrorHediff</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef>
+		<defName>BotchJob_RotstinkBlast</defName>
+		<label>rot stink blast</label>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesBlood>false</makesBlood>
+		<externalViolence>true</externalViolence>
+		<isExplosive>true</isExplosive>
+		<soundExplosion>BotchJob_BloodflameImpactSound</soundExplosion>
+		<combatLogRules>Damage_Bomb</combatLogRules>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<deathMessage>{0} has been killed by a rot blast.</deathMessage>
+		<hediff>Shredded</hediff>
+		<armorCategory>Blunt</armorCategory>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>22</defaultDamage>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(0.87, 0.66, 0.47)</explosionColorCenter>
+		<explosionColorEdge>(0.95, 0.69, 0.45)</explosionColorEdge>
+		<canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+		<additionalHediffs>
+			<li>
+				<hediff>LungRotExposure</hediff>
+				<severityPerDamageDealt>0.005</severityPerDamageDealt>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef ParentName="Flame">
+		<defName>BotchJob_BloodflameRotstinkBlast</defName>
+		<label>bloodflame rot blast</label>
+		<soundExplosion>BotchJob_BloodflameImpactSound</soundExplosion>
+		<deathMessage>{0} has been killed by a bloodflame rot blast.</deathMessage>
+		<defaultDamage>24</defaultDamage>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(0.87, 0.66, 0.47)</explosionColorCenter>
+		<explosionColorEdge>(0.95, 0.69, 0.45)</explosionColorEdge>
+		<additionalHediffs>
+			<li>
+				<hediff>LungRotExposure</hediff>
+				<severityPerDamageDealt>0.005</severityPerDamageDealt>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef ParentName="Flame">
+		<defName>BotchJob_BloodflameImpact</defName>
+		<label>bloodflame</label>
+		<deathMessage>{0} has been incinerated by bloodflame.</deathMessage>
+		<minDamageToFragment>15</minDamageToFragment>
+		<defaultDamage>25</defaultDamage>
+		<explosionHeatEnergyPerCell>30</explosionHeatEnergyPerCell>
+		<explosionCellFleck>DustPuffThick</explosionCellFleck>
+		<explosionColorCenter>(1, 0.4, 0.4)</explosionColorCenter>
+		<explosionColorEdge>(1, 0.7, 0.7)</explosionColorEdge>
+		<soundExplosion>BotchJob_BloodflameImpactSound</soundExplosion>
+	</DamageDef>
+
+</Defs>

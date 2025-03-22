@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>BotchJob_DoBillsProfaneAlchemy</defName>
+		<label>perform profane alchemy</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BotchJob_ProfaneAlchemyBench</li>
+		</fixedBillGiverDefs>
+		<verb>perform profane alchemy</verb>
+		<gerund>performing alchemy at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>BotchJob_ProfaneRitual</defName>
+		<label>conduct dark practice</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
+		<priorityInType>100</priorityInType>
+		<fixedBillGiverDefs>
+			<li>BotchJob_ProfaneRitualCircle</li>
+		</fixedBillGiverDefs>
+		<verb>conduct dark practice</verb>
+		<gerund>conducting dark practices at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
+</Defs>

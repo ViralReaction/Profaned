@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SoundDef>
+		<defName>BotchJob_ColossusRoar</defName>
+		<context>MapOnly</context>
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Misc/BotchJob_ColossusRoar</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>25~25</volumeRange>
+				<pitchRange>0.9541176~1.137647</pitchRange>
+				<distRange>0~70</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BotchJob_GraspingDead</defName>
+		<context>MapOnly</context>
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Misc/BotchJob_GraspingDead</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<distRange>0~70</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BotchJob_IceShardsImpact</defName>
+		<context>MapOnly</context>
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Misc/BotchJob_IceShardsImpact</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<distRange>0~70</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BotchJob_ProfanedStaffCast</defName>
+		<context>MapOnly</context>
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Misc/BotchJob_ProfanedStaffCast</clipPath>
+					</li>
+				</grains>
+				<volumeRange>30~30</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<distRange>0~70</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>BotchJob_BloodflameImpactSound</defName>
+		<context>MapOnly</context>
+		<maxVoices>2</maxVoices>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>Misc/BotchJob_BloodflameImpact</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<distRange>0~70</distRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+</Defs>

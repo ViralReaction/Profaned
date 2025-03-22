@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== Wraith ================================= -->
+	<ThingDef ParentName="BotchJob_UndeadAnimalBase" Name="BotchJob_Wraith">
+		<defName>BotchJob_Wraith</defName>
+		<label>wraith</label>
+		<description>A restless spirit trapped between life and death. It moves slowly but is unimpeded by difficult terrain. In combat, its chilling attacks cause frostbite build up and its ranged ability can pass through walls.\n\nWraiths are the source of luminous dust which is a useful crafting ingredient. It can be periodically extracted from them if they are part of the faction.</description>
+		<statBases>
+			<MoveSpeed>2.5</MoveSpeed>
+			<MarketValue>500</MarketValue>
+			<FilthRate>0</FilthRate>
+		</statBases>
+		<tools>
+			<li>
+				<label>wraith claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.6</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Frostbite</def>
+						<amount>2</amount>
+					</li>
+				</extraMeleeDamages>
+			</li>
+		</tools>
+		<comps>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<resourceDef>BotchJob_LuminousDust</resourceDef>
+				<gatheringIntervalDays>5</gatheringIntervalDays>
+				<resourceAmount>1</resourceAmount>
+				<customResourceString>BotchJob_LuminousDustProduction</customResourceString>
+
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_InitialHediff">
+				<hediffname>BotchJob_WraithHediff</hediffname>
+				<hediffseverity>1</hediffseverity>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_Floating">
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>project wraith claw</label>
+						<description>Project a ghostly claw that can pass through walls and other obstacles.</description>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>10</cooldownTime>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<verbs MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<forcedMissRadius>1.5</forcedMissRadius>
+				<defaultProjectile>BotchJob_WraithClaw</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<stopBurstWithoutLos>false</stopBurstWithoutLos>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>Interact_BeatFire</soundCast>
+				<minRange>1</minRange>
+				<range>10</range>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>project wraith claw</label>
+				<commonality>.8</commonality>
+			</li>
+		</verbs>
+		<race>
+			<body>Human</body>
+			<baseHealthScale>1</baseHealthScale>
+			<baseBodySize>1</baseBodySize>
+			<bloodDef>BotchJob_Filth_Ectoplasm</bloodDef>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<wildness>0.6</wildness>
+			<manhunterOnTameFailChance>0.8</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+			<trainability>Advanced</trainability>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<BotchJob_LuminousDust>2</BotchJob_LuminousDust>
+		</butcherProducts>
+		<tradeTags>
+			<li>AnimalExotic</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>BotchJob_Wraith</defName>
+		<label>wraith</label>
+		<race>BotchJob_Wraith</race>
+		<combatPower>75</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<aiAvoidCover>true</aiAvoidCover>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Wraith/BotchJob_Wraith</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Wraith/BotchJob_Wraith2</texPath></li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_Wraith/BotchJob_Wraith</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_Wraith/BotchJob_Wraith</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<ecoSystemWeight>1</ecoSystemWeight>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<AnimalBehaviours.AnimalsDisabledFromQuestsDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_DisabledAnimalFromQuests</defName>
+		<disabledFromQuestsPawns>
+			<li>BotchJob_UndeadColossus</li>
+			<li>BotchJob_Ghoul</li>
+			<li>BotchJob_Wraith</li>
+			<li>BotchJob_Skeleton</li>
+			<li>BotchJob_UndeadWarg</li>
+			<li>BotchJob_UndeadHorse</li>
+			<li>BotchJob_UndeadCat</li>
+			<li>BotchJob_UndeadDragon</li>
+		</disabledFromQuestsPawns>
+	</AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+
+</Defs>

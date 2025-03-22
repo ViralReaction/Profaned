@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Fur =================== -->
+	<FurDef MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_RottingFlesh</defName>
+		<noGraphic>true</noGraphic>
+		<bodyTypeGraphicPaths>
+			<Male>Things/Pawn/Humanlike/Bodies/RottingFlesh/Male_RottingFleshBody</Male>
+			<Female>Things/Pawn/Humanlike/Bodies/RottingFlesh/Female_RottingFleshBody</Female>
+			<Hulk>Things/Pawn/Humanlike/Bodies/RottingFlesh/Hulk_RottingFleshBody</Hulk>
+			<Fat>Things/Pawn/Humanlike/Bodies/RottingFlesh/Fat_RottingFleshBody</Fat>
+			<Thin>Things/Pawn/Humanlike/Bodies/RottingFlesh/Thin_RottingFleshBody</Thin>
+			<Child>Things/Pawn/Humanlike/Bodies/RottingFlesh/Male_RottingFleshBody</Child>
+			<Baby>Things/Pawn/Humanlike/Bodies/RottingFlesh/Male_RottingFleshBody</Baby>
+		</bodyTypeGraphicPaths>
+	</FurDef>
+
+	<FurDef MayRequire="Ludeon.RimWorld.Biotech,OskarPotocki.VanillaFactionsExpanded.Core">
+		<defName>BotchJob_SkeletalBody</defName>
+		<noGraphic>true</noGraphic>
+		<bodyTypeGraphicPaths>
+			<Male>Things/Pawn/Humanlike/Bodies/RottingFlesh/Male_RottingFleshBody2</Male>
+			<Female>Things/Pawn/Humanlike/Bodies/RottingFlesh/Female_RottingFleshBody2</Female>
+			<Hulk>Things/Pawn/Humanlike/Bodies/RottingFlesh/Hulk_RottingFleshBody2</Hulk>
+			<Fat>Things/Pawn/Humanlike/Bodies/RottingFlesh/Fat_RottingFleshBody2</Fat>
+			<Thin>Things/Pawn/Humanlike/Bodies/RottingFlesh/Thin_RottingFleshBody2</Thin>
+			<Child>Things/Pawn/Humanlike/Bodies/RottingFlesh/Male_RottingFleshBody2</Child>
+			<Baby>Things/Pawn/Humanlike/Bodies/RottingFlesh/Male_RottingFleshBody2</Baby>
+		</bodyTypeGraphicPaths>
+	</FurDef>
+
+</Defs>

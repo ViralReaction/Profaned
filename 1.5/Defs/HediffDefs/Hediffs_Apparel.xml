@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ==================== Aura Hediff/Mote =================== -->  
+	<HediffDef>
+		<defName>BotchJob_ScourgeknightAura</defName>
+		<label>scourge knight aura</label>
+		<description>Radiating a sinister aura that grants nearby allies scourge knight's fortitude, slightly reducing damage taken and providing toxic resistance.</description>
+		<defaultLabelColor>(0.2, 0.6, 0.6)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_GiveHediffsInRange">
+				<range>5</range>
+				<mote>BotchJob_ScourgeknightAuraMote</mote>
+				<hideMoteWhenNotDrafted>true</hideMoteWhenNotDrafted>
+				<targetingParameters>
+					<canTargetPawns>true</canTargetPawns>
+					<canTargetHumans>true</canTargetHumans>
+				</targetingParameters>
+				<hediff>BotchJob_ScourgeknightAuraBuff</hediff>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>BotchJob_ScourgeknightAuraBuff</defName>
+		<label>scourge knight's fortitude</label>
+		<defaultLabelColor>(0.70, 1, 0.95)</defaultLabelColor>
+		<description>Toxic resistance and damage reduction whilst within scourge knight aura.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_Link">
+				<requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+				<maxDistance>5</maxDistance>
+				<customMote>BotchJob_ScourgeknightAuraLine</customMote>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<IncomingDamageFactor>-0.2</IncomingDamageFactor>
+					<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

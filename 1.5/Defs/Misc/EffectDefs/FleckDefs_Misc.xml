@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>AbyssExplosionClouds</defName>
+		<graphicData>
+			<texPath>Things/Mote/HoraxianCloud</texPath>
+			<renderInstanced>true</renderInstanced>
+			<shaderParameters>
+				<_Color>(0, 0, 0, 0)</_Color>
+			</shaderParameters>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<growthRate>0</growthRate>
+	</FleckDef>
+
+  
+	<FleckDef ParentName="FleckBase">
+		<defName>AbyssExplosionDistortion</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.0</fadeInTime>
+		<solidTime>0.0</solidTime>
+		<fadeOutTime>0.6</fadeOutTime>
+		<growthRate>4.0</growthRate>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<texPath>Things/Mote/Black</texPath>
+			<shaderType>MoteLargeDistortionWave</shaderType>
+			<shaderParameters>
+				<_DistortionTex>/Things/Mote/PsychicDistortionCurrents</_DistortionTex>
+				<_NoiseTex>/Things/Mote/PsycastNoise</_NoiseTex>
+				<_distortionIntensity>0.12</_distortionIntensity>
+				<_brightnessMultiplier>1.15</_brightnessMultiplier>
+			</shaderParameters>
+			<drawSize>3</drawSize>
+		</graphicData>
+	</FleckDef>
+  
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>AbyssExplosionMote</defName>
+		<altitudeLayer>LowPlant</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>3.5</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<growthRate>-0.25</growthRate>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<texPath>Things/Mote/AbyssBlastMote</texPath>
+			<shaderType>Mote</shaderType>
+			<renderInstanced>true</renderInstanced>
+			<shaderParameters>
+				<_brightnessMultiplier>0.0</_brightnessMultiplier>
+			</shaderParameters>
+			<drawSize>1</drawSize>
+		</graphicData>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase">
+		<defName>AbyssExplosionDarkness</defName>
+		<altitudeLayer>Terrain</altitudeLayer>
+		<fadeInTime>1</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<growthRate>2</growthRate>
+		<graphicData>
+			<graphicClass>Graphic_FleckPulse</graphicClass>
+			<texPath>Things/Mote/SoftRing</texPath>
+			<shaderType>DarkHighlightRing</shaderType>
+			<shaderParameters>
+				<_NoiseTex>/Things/Mote/PsycastNoise</_NoiseTex>
+				<_NoiseIntensity>100</_NoiseIntensity>
+				<_Color2>(1, 1, 1, 0.5)</_Color2>
+			</shaderParameters>
+			<drawSize>10.0</drawSize>
+		</graphicData>
+	</FleckDef>
+	
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>BotchJob_GraspingDeadFog</defName>
+		<graphicData>
+			<texPath>Things/Mote/GraspingDeadFog</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0</fadeInTime>
+		<solidTime>0</solidTime>
+		<fadeOutTime>3</fadeOutTime>
+		<growthRate>0</growthRate>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>BotchJob_RitualCircleFleckA</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<growthRate>0</growthRate>
+		<acceleration>(0, 0, 0.3)</acceleration>
+		<graphicData>
+			<texPath>Things/Mote/BotchJob_BestowCurseMote</texPath>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+	</FleckDef>
+
+	<FleckDef ParentName="FleckBase">
+		<defName>BotchJob_RitualCircleFleckB</defName>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>0.1</solidTime>
+		<fadeOutTime>2</fadeOutTime>
+		<growthRate>0.2</growthRate>
+		<graphicData>
+			<texPath>Things/Mote/BotchJob_ProfaneRitualMote</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<color>(0.2,0.5,0.2,1)</color>
+		</graphicData>
+	</FleckDef>
+
+</Defs>

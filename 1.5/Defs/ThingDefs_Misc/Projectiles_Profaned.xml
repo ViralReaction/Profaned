@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>BotchJob_ColossusSmashProj</defName>
+		<label>colossus smash</label>
+		<graphicData>
+			<texPath>Things/Projectiles/BotchJob_Invisible</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>BotchJob_ColossusSmash</damageDef>
+			<explosionRadius>2.5</explosionRadius>
+			<screenShakeFactor>2</screenShakeFactor>
+			<explosionEffect>BotchJob_ColossusSmashEffect</explosionEffect>
+			<speed>30</speed>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Dragon Projectiles -->
+	<VFECore.ExpandableProjectileDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="BaseBullet">
+		<defName>BotchJob_DragonToxicBreath</defName>
+		<label>toxic dragon breath</label>
+		<thingClass>VFECore.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectiles/ToxicflameSurge</texPath>
+			<texPathFadeOut>Things/Projectiles/ToxicflameSurgeFade</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>BotchJob_DragonToxicBreathDamage</damageDef>
+			<speed>40</speed>
+			<damageAmountBase>30</damageAmountBase>
+			<ai_IsIncendiary>true</ai_IsIncendiary>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>100</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0.2, 0, -2)</startingPositionOffset>
+		<totalSizeScale>1.1</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>10</tickDamageRate>
+		<dealsDamageOnce>true</dealsDamageOnce>
+		<minDistanceToAffect>1</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>BotchJob_PutridMass</defName>
+		<label>putrid mass</label>
+		<graphicData>
+			<texPath>Things/Projectiles/BotchJob_PutridMass</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>1.8</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>BotchJob_RotstinkBlast</damageDef>
+			<explosionRadius>3</explosionRadius>
+			<speed>20</speed>
+			<arcHeightFactor>3</arcHeightFactor>
+			<shadowSize>1.8</shadowSize>
+			<postExplosionGasType>RotStink</postExplosionGasType>
+			<preExplosionSpawnThingDef>BotchJob_Filth_Undead</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+		</projectile>
+	</ThingDef>
+
+	<!-- Skeleton Projectile -->
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>BotchJob_BoneProjectile</defName>
+		<label>bone</label>
+		<graphicData>
+			<texPath>Things/Projectiles/BotchJob_BoneProjectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<damageDef>BotchJob_BoneImpact</damageDef>
+			<explosionRadius>0.8</explosionRadius>
+			<speed>16</speed>
+			<screenShakeFactor>0</screenShakeFactor>
+			<arcHeightFactor>1.2</arcHeightFactor>
+		</projectile>
+	</ThingDef>
+	
+	<!-- Wraith Projectile -->
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>BotchJob_WraithClaw</defName>
+		<label>wraith claw</label>
+		<graphicData>
+			<texPath>Things/Projectiles/BotchJob_WraithClaw</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		<projectile>
+			<explosionRadius>1.5</explosionRadius>
+			<damageDef>BotchJob_WraithClawBlast</damageDef>
+			<speed>10</speed>
+			<screenShakeFactor>0</screenShakeFactor>
+			<flyOverhead>true</flyOverhead>
+		</projectile>
+	</ThingDef>
+
+</Defs>

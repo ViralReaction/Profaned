@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== Ghoul ================================= -->
+	<ThingDef ParentName="BotchJob_UndeadAnimalBase">
+		<defName>BotchJob_Ghoul</defName>
+		<label>ghoul</label>
+		<description>Once a human, now cursed with undeath and twisted into a ferocious, clawed fiend. Its humanity is long gone, leaving a feral creature of pure instinct.\n\nGhouls are deadly in close quarters and in in combat, will charge directly towards their victim to attack with their vicious claws.</description>
+		<statBases>
+			<MoveSpeed>4</MoveSpeed>
+			<MarketValue>350</MarketValue>
+			<FilthRate>3</FilthRate>
+			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2.2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>10</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>17</power>
+				<cooldownTime>2.4</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+		</comps>
+		<race>
+			<body>Human</body>
+			<herdAnimal>true</herdAnimal>
+			<baseHealthScale>1.5</baseHealthScale>
+			<nameOnTameChance>1</nameOnTameChance>
+			<wildness>0.7</wildness>
+			<manhunterOnTameFailChance>0.8</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+			<trainability>Advanced</trainability>
+			<baseBodySize>1.6</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.3)</li>
+				<li>(0.32, 0, 0.08)</li>
+				<li>(0.0, 0, -0.21)</li>
+				<li>(-0.32, 0, 0.08)</li>
+			</headPosPerRotation>
+		</race>
+		<butcherProducts>
+			<BotchJob_TaintedBone>4</BotchJob_TaintedBone>
+			<BotchJob_CorruptedBlood>2</BotchJob_CorruptedBlood>
+		</butcherProducts>
+		<tradeTags>
+			<li>AnimalExotic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>BotchJob_Ghoul</defName>
+		<label>ghoul</label>
+		<race>BotchJob_Ghoul</race>
+		<combatPower>120</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<wildGroupSize>1~4</wildGroupSize>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Ghoul/BotchJob_Ghoul</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Ghoul/BotchJob_Ghoul2</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Ghoul/BotchJob_Ghoul3</texPath></li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_Ghoul/BotchJob_Ghoul</texPath>
+					<drawSize>1.6</drawSize>
+					<shadowData>
+						<volume>(1, 0.8, 0.5)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_Ghoul/BotchJob_Ghoul</texPath>
+					<drawSize>1.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

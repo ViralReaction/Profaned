@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== Damage/Blood ================================= -->
+	<ThingDef ParentName="BaseFilth">
+		<defName>BotchJob_Filth_Ectoplasm</defName>
+		<label>ectoplasm</label>
+		<statBases>
+			<Cleanliness>-5</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/BotchJob_Filth_Ectoplasm</texPath>
+		</graphicData>
+		<filth>
+			<disappearsInDays>0.01~0.03</disappearsInDays>
+			<cleaningWorkToReduceThickness>30</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<rainWashes>true</rainWashes>
+			<allowsFire>false</allowsFire>
+			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+		</filth>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseFilth">
+		<defName>BotchJob_Filth_Undead</defName>
+		<label>putrid entrails</label>
+		<statBases>
+			<Beauty>-5</Beauty>
+			<Cleanliness>-5</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/BotchJob_Filth_Undead</texPath>
+		</graphicData>
+		<filth>
+			<disappearsInDays>0.01~0.03</disappearsInDays>
+			<cleaningWorkToReduceThickness>30</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<rainWashes>true</rainWashes>
+			<allowsFire>false</allowsFire>
+			<cleaningSound>Interact_CleanFilth_Fluid</cleaningSound>
+		</filth>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseFilth">
+		<defName>BotchJob_Filth_Bone</defName>
+		<label>Bone residue</label>
+		<statBases>
+			<Beauty>-5</Beauty>
+			<Cleanliness>-5</Cleanliness>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/BotchJob_Filth_Bone</texPath>
+		</graphicData>
+		<filth>
+			<disappearsInDays>0.01~0.03</disappearsInDays>
+			<cleaningWorkToReduceThickness>30</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<rainWashes>true</rainWashes>
+			<allowsFire>false</allowsFire>
+			<cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+		</filth>
+	</ThingDef>
+
+</Defs>

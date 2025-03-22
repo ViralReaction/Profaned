@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="AnimalThingBase" Name="BotchJob_UndeadAnimalBase" Abstract="True">
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">1</ToxicEnvironmentResistance>
+			<ComfyTemperatureMin>-80</ComfyTemperatureMin>
+			<ComfyTemperatureMax>30</ComfyTemperatureMax>
+			<PainShockThreshold>0.99</PainShockThreshold>
+			<MeatAmount>0</MeatAmount>
+		</statBases>
+		<race>
+			<hasGenders>false</hasGenders>
+			<needsRest>false</needsRest>
+			<foodType>OmnivoreRoughAnimal</foodType>
+			<lifeExpectancy>1200</lifeExpectancy>
+			<baseHungerRate>0.001</baseHungerRate>
+			<canBePredatorPrey>false</canBePredatorPrey>
+			<fleshType>BotchJob_UndeadFlesh</fleshType>
+			<bloodDef>BotchJob_Filth_Undead</bloodDef>
+			<useMeatFrom>Human</useMeatFrom>
+			<petness>0</petness>
+			<hediffGiverSets Inherit="False"/>
+			<wildBiomes>
+				<TemperateForest>0.005</TemperateForest>
+				<TemperateSwamp>0.005</TemperateSwamp>
+				<AridShrubland>0.005</AridShrubland>
+				<BorealForest>0.005</BorealForest>
+				<IceSheet>0.005</IceSheet>
+				<SeaIce>0.005</SeaIce>
+				<Tundra>0.005</Tundra>
+				<ColdBog>0.005</ColdBog>
+				<TropicalRainforest>0.005</TropicalRainforest>
+				<TropicalSwamp>0.005</TropicalSwamp>
+				<Desert>0.005</Desert>
+				<ExtremeDesert>0.005</ExtremeDesert>
+				<DankPyon_DarkForest MayRequire="DankPyon.Medieval.Overhaul">0.005</DankPyon_DarkForest>
+			</wildBiomes>
+		</race>
+		<comps>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_DoesntFlee"/>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_DiseaseImmunity">
+				<hediffsToRemove>
+					<li>Animal_Plague</li>
+					<li>Animal_Flu</li>
+					<li>LungRotExposure</li>
+					<li>Scaria</li>
+					<li>WoundInfection</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">BloodRot</li>
+					<li MayRequire="Ludeon.RimWorld.Royalty">Abasia</li>
+				</hediffsToRemove>
+				<tickInterval>2000</tickInterval>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_NoTamingDecay"/>
+		</comps>
+	</ThingDef>
+
+</Defs>

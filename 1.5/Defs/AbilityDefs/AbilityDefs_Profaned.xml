@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AbilityDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_BestowCurse</defName>
+		<label>bestow curse</label>
+		<description>Bestow your curse onto another, turning them into what you are. If used too soon after previously cursing someone, the bestower will lose their curse, returning to their human form but dying in the process.</description>
+		<stunTargetWhileCasting>true</stunTargetWhileCasting>
+		<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+		<cooldownTicksRange>900000</cooldownTicksRange>
+		<jobDef>CastAbilityOnThingMelee</jobDef>
+		<iconPath>UI/Icons/Misc/BotchJob_BestowCurseIcon</iconPath>
+		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
+		<warmupEffecter>BotchJob_BestowCurseEffect</warmupEffecter>
+		<displayOrder>500</displayOrder>
+		<hostile>false</hostile>
+		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<range>-1</range>
+			<warmupTime>4</warmupTime>
+			<targetParams>
+				<canTargetAnimals>false</canTargetAnimals>
+				<canTargetSelf>false</canTargetSelf>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetMechs>false</canTargetMechs>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityReimplantXenogerm"/>
+		</comps>
+	</AbilityDef>
+
+</Defs>

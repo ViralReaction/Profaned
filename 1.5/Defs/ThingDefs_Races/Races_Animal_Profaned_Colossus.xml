@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== Colossus ================================= -->
+	<ThingDef ParentName="BotchJob_UndeadAnimalBase">
+		<defName>BotchJob_UndeadColossus</defName>
+		<label>undead colossus</label>
+		<description>A giant, lumbering undead creature. Its heavily decomposed body makes it impossible to tell what it might have been in life, if it was ever alive in the first place.\n\nColossi are slow moving but can absorb a lot of damage and deliver devastating ground smashes that heavily damage walls and structures.</description>
+		<statBases>
+			<MoveSpeed>2.5</MoveSpeed>
+			<MarketValue>1500</MarketValue>
+			<ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>0</ArmorRating_Heat>
+			<FilthRate>8</FilthRate>
+		</statBases>
+		<uiIconScale>1.75</uiIconScale>
+		<tools>
+			<li>
+				<label>colossus hand</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>22</power>
+				<cooldownTime>2.8</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<chanceFactor>0.8</chanceFactor>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>6</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>colossus hand</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>22</power>
+				<cooldownTime>2.8</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<chanceFactor>0.8</chanceFactor>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>6</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>17</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>colossus smash</label>
+						<description>Deliver a devastating ground smash that heavily damages walls and structures.</description>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+						<comps>
+							<li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+								<compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+								<cooldownTime>45</cooldownTime>
+							</li>
+						</comps>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<verbs MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>BotchJob_ColossusSmashProj</defaultProjectile>
+				<forcedMissRadius>1</forcedMissRadius>
+				<warmupTime>4</warmupTime>
+				<soundCast>BotchJob_ColossusRoar</soundCast>
+				<minRange>1</minRange>
+				<burstShotCount>1</burstShotCount>
+				<aimingTargetMote>BotchJob_ColossusSmashTarget</aimingTargetMote>
+				<ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+				<ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetPawns>false</canTargetPawns>
+				</targetParams>
+				<range>5</range>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>colossus smash</label>
+				<commandIcon>UI/Icons/Misc/BotchJob_ColossusSmashIcon</commandIcon>
+				<commonality>0.5</commonality>
+			</li>
+		</verbs>
+		<race>
+			<body>Human</body>
+			<wildBiomes>
+				<TemperateForest>0.002</TemperateForest>
+				<TemperateSwamp>0.002</TemperateSwamp>
+				<AridShrubland>0.002</AridShrubland>
+				<BorealForest>0.02</BorealForest>
+				<IceSheet>0.002</IceSheet>
+				<SeaIce>0.002</SeaIce>
+				<Tundra>0.002</Tundra>
+				<ColdBog>0.002</ColdBog>
+				<TropicalRainforest>0.002</TropicalRainforest>
+				<TropicalSwamp>0.002</TropicalSwamp>
+				<Desert>0.002</Desert>
+				<ExtremeDesert>0.002</ExtremeDesert>
+				<DankPyon_DarkForest MayRequire="DankPyon.Medieval.Overhaul">0.02</DankPyon_DarkForest>
+			</wildBiomes>
+			<baseBodySize>4</baseBodySize>
+			<baseHealthScale>5</baseHealthScale>
+			<hasGenders>false</hasGenders>
+			<trainability>Advanced</trainability>
+			<wildness>0.9</wildness>
+			<manhunterOnTameFailChance>0.8</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.36)</li>
+				<li>(0.11, 0, 0.29)</li>
+				<li>(0, 0, 0.25)</li>
+				<li>(-0.11, 0, 0.29)</li>
+			</headPosPerRotation>
+		</race>
+		<butcherProducts>
+			<BotchJob_TaintedBone>10</BotchJob_TaintedBone>
+			<BotchJob_ColossusHeart>1</BotchJob_ColossusHeart>
+			<BotchJob_CorruptedBlood>5</BotchJob_CorruptedBlood>
+		</butcherProducts>
+		<tradeTags>
+			<li>AnimalExotic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>BotchJob_UndeadColossus</defName>
+		<label>undead colossus</label>
+		<race>BotchJob_UndeadColossus</race>
+		<combatPower>200</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>2</ecoSystemWeight>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/BotchJob_UndeadColossus/BotchJob_UndeadColossus</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_UndeadColossus/BotchJob_UndeadColossus2</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_UndeadColossus/BotchJob_UndeadColossus3</texPath></li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_UndeadColossus/BotchJob_UndeadColossus</texPath>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(1.2, 1, 0.5)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_UndeadColossus/BotchJob_UndeadColossus</texPath>
+					<drawSize>3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

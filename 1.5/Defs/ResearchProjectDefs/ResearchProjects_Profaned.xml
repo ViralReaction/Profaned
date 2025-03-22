@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>BotchJob_ProfanedResearchTab</defName>
+		<label>Profaned research</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef>
+		<defName>BotchJob_ProfanedBasics</defName>
+		<techLevel>Medieval</techLevel>
+		<label>basic profane insight</label>
+		<description>Learn the basics regarding the profaned and undead creatures.</description>
+		<tab>BotchJob_ProfanedResearchTab</tab>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+		<prerequisites>
+			<li>Smithing</li>
+		</prerequisites>
+		<baseCost>1000</baseCost>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BotchJob_ProfanedAdvanced</defName>
+		<techLevel>Medieval</techLevel>
+		<label>advanced profane insight</label>
+		<description>Further increase knowledge regarding the profaned and undead creatures.</description>
+		<tab>BotchJob_ProfanedResearchTab</tab>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+		<prerequisites>
+			<li>BotchJob_ProfanedBasics</li>
+		</prerequisites>
+		<baseCost>3000</baseCost>
+		<techprintMarketValue>1000</techprintMarketValue>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>BotchJob_ProfanedAlchemy</defName>
+		<techLevel>Medieval</techLevel>
+		<label>profane alchemy</label>
+		<description>Learn to utilise parts harvested from undead creatures to create powerful items and even the undead creatures themselves via profane alchemy.</description>
+		<tab>BotchJob_ProfanedResearchTab</tab>
+		<researchViewX>2</researchViewX>
+		<researchViewY>0</researchViewY>
+		<prerequisites>
+			<li>BotchJob_ProfanedBasics</li>
+			<li>BotchJob_ProfanedAdvanced</li>
+			<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Alchemy</li>
+		</prerequisites>
+		<baseCost>5000</baseCost>
+	</ResearchProjectDef>
+  
+</Defs>

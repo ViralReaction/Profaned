@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ScenarioDef>
+		<defName>BotchJob_ProfanedStart</defName>
+		<label>Profaned Cursebearers</label>
+		<description>Whoever you were in life, it no longer matters. You are Profaned, former humans cursed with undeath and by the will of your master, compelled to conquer indiscriminately and spread your vile curse across the realm.\n\nFor the longest time, this was all you knew, but by some miracle, the three of you have broken free of the will of your master.\n\nDespite everything, you are still what you are, shunned and reviled by most. You can try to make amends for your past deeds or you can continue to spread your curse for your own ends.\n\nThe choice is yours.</description>
+		<scenario>
+			<summary>Three profaned cursebearers seeking to make amends or establish their own dominion.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>BotchJob_ProfanedPlayerFaction</factionDef>
+			</playerFaction>
+			<parts>
+	  
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+					<def>ConfigurePawnsXenotypes</def>
+					<pawnChoiceCount>6</pawnChoiceCount>
+					<customSummary>Three profaned cursebearers seeking to make amends or establish their own dominion.</customSummary>
+					<overrideKinds>
+						<li>
+							<xenotype>BotchJob_ProfanedCursebearerXenotype</xenotype>
+							<pawnKind>BotchJob_ProfanedCursebearer</pawnKind>
+						</li>
+					</overrideKinds>
+					<xenotypeCounts>
+						<li>
+							<xenotype>BotchJob_ProfanedCursebearerXenotype</xenotype>
+							<count>3</count>
+							<description>Profaned Cursebearer</description>
+							<allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+						</li>
+					</xenotypeCounts>
+				</li>
+
+				<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="KCSG.ScenPart_AddStartingStructure">
+					<def>VFEC_AddStartingStructure</def>
+					<structureLabel>A dark crypt</structureLabel>
+					<nearMapCenter>true</nearMapCenter>
+					<chooseFrom>
+						<li>BotchJob_DarkCrypt</li>
+					</chooseFrom>
+				</li>
+
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+		
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>BotchJob_ProfanedBasics</project>
+				</li>
+		
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>ComplexFurniture</project>
+				</li>
+        
+				<!-- Player starting things -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>300</count>
+				</li>
+		
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pemmican</thingDef>
+					<count>300</count>
+				</li>
+		
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineHerbal</thingDef>
+					<count>20</count>
+				</li>
+		
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>BotchJob_SoulGem</thingDef>
+					<count>3</count>
+				</li>
+		
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>BotchJob_WeatheredPauldron</thingDef>
+					<stuff>Steel</stuff>
+					<count>2</count>
+				</li>
+				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>BotchJob_WeatheredChainmailCoif</thingDef>
+					<stuff>Steel</stuff>
+					<count>1</count>
+				</li>
+				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>BotchJob_WeatheredKettleHelmet</thingDef>
+					<stuff>Steel</stuff>
+					<count>1</count>
+				</li>
+				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>BotchJob_ProfanedWarAxe</thingDef>
+					<stuff>Steel</stuff>
+					<count>1</count>
+				</li>
+				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>BotchJob_WeatheredShortbow</thingDef>
+					<count>2</count>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>Steel</thingDef>
+					<count>450</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>300</count>
+				</li>
+		
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<animalKind>BotchJob_Skeleton</animalKind>
+					<count>1</count>
+				</li>
+		
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<animalKind>BotchJob_Ghoul</animalKind>
+					<count>1</count>
+				</li>
+
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>WoodLog</thingDef>
+					<count>500</count>
+				</li>
+        
+				<!-- Game start dialog -->
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>Whoever you were in life, it no longer matters. You are Profaned, former humans cursed with undeath and by the will of your master, compelled to conquer indiscriminately and spread your vile curse across the realm..\n\nFor the longest time, this was all you knew, but by some miracle, the three of you have broken free of the will of your master.\n\nDespite everything, you are still what you are, shunned and reviled by most. You can try to make amends for your past deeds or you can continue to spread your curse for your own ends.\n\nThe choice is yours.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+        
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+</Defs>

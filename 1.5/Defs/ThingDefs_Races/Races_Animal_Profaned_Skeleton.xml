@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ========================== Skeleton ================================= -->
+	<ThingDef ParentName="BotchJob_UndeadAnimalBase">
+		<defName>BotchJob_Skeleton</defName>
+		<label>skeleton</label>
+		<description>The reanimated skeletal remains of a human. It is weak in close quarters but can detach bones from itself and launch them a short distance.</description>
+		<statBases>
+			<MoveSpeed>4</MoveSpeed>
+			<MarketValue>250</MarketValue>
+			<FilthRate>2</FilthRate>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>right hand</label>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<chanceFactor>0.5</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="MVCF.Comps.CompProperties_RandomVerbs">
+				<meleeChance>0.4</meleeChance>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
+			<li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<verbProps>
+					<li>
+						<label>bone</label>
+						<description>Throw a bone projectile in an arc that inflicts blunt damage on hit.</description>
+						<canBeToggled>true</canBeToggled>
+						<separateToggle>false</separateToggle>
+					</li>
+				</verbProps>
+			</li>
+		</comps>
+		<verbs MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>BotchJob_BoneProjectile</defaultProjectile>
+				<forcedMissRadius>1</forcedMissRadius>
+				<warmupTime>2</warmupTime>
+				<soundCast>Interact_BeatFire</soundCast>
+				<minRange>2</minRange>
+				<ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<range>14</range>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<label>bone</label>
+				<commonality>.8</commonality>
+			</li>
+		</verbs>
+		<race>
+			<body>Human</body>
+			<baseHealthScale>1.2</baseHealthScale>
+			<wildness>0.5</wildness>
+			<manhunterOnTameFailChance>0.5</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+			<trainability>Advanced</trainability>
+			<baseBodySize>1</baseBodySize>
+			<bloodDef>BotchJob_Filth_Bone</bloodDef>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.3)</li>
+				<li>(0.32, 0, 0.08)</li>
+				<li>(0.0, 0, -0.21)</li>
+				<li>(-0.32, 0, 0.08)</li>
+			</headPosPerRotation>
+		</race>
+		<butcherProducts>
+			<BotchJob_TaintedBone>3</BotchJob_TaintedBone>
+		</butcherProducts>
+		<tradeTags>
+			<li>AnimalExotic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>BotchJob_Skeleton</defName>
+		<label>skeleton</label>
+		<race>BotchJob_Skeleton</race>
+		<combatPower>50</combatPower>
+		<canArriveManhunter>false</canArriveManhunter>
+		<ecoSystemWeight>1</ecoSystemWeight>
+		<aiAvoidCover>true</aiAvoidCover>
+		<alternateGraphicChance>1</alternateGraphicChance>
+		<alternateGraphics>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Skeleton/BotchJob_Skeleton</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Skeleton/BotchJob_Skeleton2</texPath></li>
+			<li><texPath>Things/Pawn/Animal/BotchJob_Skeleton/BotchJob_Skeleton3</texPath></li>
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_Skeleton/BotchJob_Skeleton</texPath>
+					<drawSize>1.4</drawSize>
+					<shadowData>
+						<volume>(0.3, 0.7, 0.3)</volume>
+						<offset>(0,0,-0.5)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/BotchJob_Skeleton/BotchJob_Skeleton</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Tiles =================== -->
+	<TerrainDef Abstract="True" ParentName="FloorBase" Name="BotchJob_ProfanedTile">
+		<renderPrecedence>220</renderPrecedence>
+		<description>Ominous stone tiles in the style of the Profaned. Beautiful to some, unsettling to others.</description>
+		<texturePath>Terrain/Surfaces/ProfanedTile</texturePath>
+		<pollutionTintColor>(0.95, 0.95, 0.93, 1)</pollutionTintColor>
+		<isPaintable>true</isPaintable>
+		<statBases>
+			<WorkToBuild>1000</WorkToBuild>
+			<Beauty>2</Beauty>
+			<CleaningTimeFactor>0.8</CleaningTimeFactor>
+		</statBases>
+		<designatorDropdown>BotchJob_ProfanedTileDropdown</designatorDropdown>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+			<li>BotchJob_ProfanedAdvanced</li>
+		</researchPrerequisites>
+		<tags>
+			<li>FineFloor</li>
+		</tags>
+		<constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+		<uiOrder>2080</uiOrder>
+	</TerrainDef>
+
+	<TerrainDef ParentName="BotchJob_ProfanedTile">
+		<defName>ProfanedTileSandstone</defName>
+		<label>profaned sandstone tile</label>
+		<color>(126,104,94)</color>
+		<costList>
+			<BlocksSandstone>8</BlocksSandstone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="BotchJob_ProfanedTile">
+		<defName>ProfanedTileGranite</defName>
+		<label>profaned granite tile</label>
+		<color>(105,95,97)</color>
+		<costList>
+			<BlocksGranite>8</BlocksGranite>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="BotchJob_ProfanedTile">
+		<defName>ProfanedTileLimestone</defName>
+		<label>profaned limestone tile</label>
+		<color>(158,153,135)</color>
+		<costList>
+			<BlocksLimestone>8</BlocksLimestone>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="BotchJob_ProfanedTile">
+		<defName>ProfanedTileSlate</defName>
+		<label>profaned slate tile</label>
+		<color>(70,70,70)</color>
+		<costList>
+			<BlocksSlate>8</BlocksSlate>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="BotchJob_ProfanedTile">
+		<defName>ProfanedTileMarble</defName>
+		<label>profaned marble tile</label>
+		<color>(132,135,132)</color>
+		<costList>
+			<BlocksMarble>8</BlocksMarble>
+		</costList>
+	</TerrainDef>
+  
+	<DesignatorDropdownGroupDef>
+		<defName>BotchJob_ProfanedTileDropdown</defName>
+		<label>profaned tile</label>
+	</DesignatorDropdownGroupDef>
+
+</Defs>
