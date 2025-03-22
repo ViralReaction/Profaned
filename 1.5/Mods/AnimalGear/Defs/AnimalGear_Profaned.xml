@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="ApparelMakeableBase">
+    <defName>BotchJob_ProfanedHorseBarding</defName>
+    <label>Profaned horse barding</label>
+    <description>Horse barding bearing the insignia of the profaned and adorned with bone. Provides some protection and insulation from the elements.</description>
+    <techLevel>Medieval</techLevel>
+	<recipeMaker>
+		<researchPrerequisite>Smithing</researchPrerequisite>
+		<recipeUsers>
+			<li>ElectricSmithy</li>
+			<li>FueledSmithy</li>
+			<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_Anvil</li>
+		</recipeUsers>
+	</recipeMaker>
+    <graphicData>
+      <texPath>Things/Pawn/Animal/BotchJob_UndeadHorse/ProfanedBarding_BotchJob_UndeadHorse</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>(1.5,1.5)</drawSize>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Mass>5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+	<costStuffCount>70</costStuffCount>
+	<stuffCategories>
+		<li>Leathery</li>
+	</stuffCategories>
+	<costList>
+      <Steel>40</Steel>
+	  <BotchJob_TaintedBone>3</BotchJob_TaintedBone>
+    </costList>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Animal/BotchJob_UndeadHorse/ProfanedBarding</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>Animal</li>
+		<li>AnimalCUTOUTCOMPLEX</li>
+        <li>BotchJob_UndeadHorse</li>
+      </tags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel"/>
+  </ThingDef>
+
+</Defs>

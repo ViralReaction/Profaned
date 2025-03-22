@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Ideology</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>/Defs/PreceptDef[defName ="Corpses_DontCare" or defName ="GladiatorDuel"]/requiredMemes</xpath>
+	<value>
+		<li>BotchJob_ProfanedMeme</li>
+		</value>
+	</match>
+	</Operation>	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationFindMod">
+				<mods>
+                    <li>Royalty</li>
+                </mods>
+			</li>
+			  <li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName ="Drape"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName ="Drape"]</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Styleable"/>
+				</comps>
+			</value>
+		</nomatch>
+		</li>
+			<li Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName ="Drape"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName ="Drape"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Styleable"/>
+			</value>
+		</nomatch>
+		</li>
+		</operations>
+	</Operation>
+	
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName ="Dresser"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName ="Dresser"]</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Styleable"/>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName ="Dresser"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName ="Dresser"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Styleable"/>
+			</value>
+		</nomatch>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName ="EndTable"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName ="EndTable"]</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Styleable"/>
+				</comps>
+			</value>
+		</nomatch>
+	</Operation>
+	
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName ="EndTable"]/comps/li[@Class="CompProperties_Styleable"]</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName ="EndTable"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Styleable"/>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

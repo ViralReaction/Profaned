@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BuildingFloorCoveringBroadBase">
+    <defName>BotchJob_ProfanedSlabLarge</defName>
+    <label>profaned slab</label>
+    <description>A large, decorative stone slab displaying profane imagery.</description>
+    <dominantStyleCategory>BotchJob_ProfanedStyleCategory</dominantStyleCategory>
+	<size>(3,3)</size>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Other/ProfanedSlabXL</texPath>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+	<uiIconScale>0.8</uiIconScale>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+	<defaultPlacingRot>North</defaultPlacingRot>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+	  <li>BotchJob_ProfanedAdvanced</li>
+    </researchPrerequisites>
+	 <building>
+      <paintable>true</paintable>
+    </building>
+  </ThingDef>
+
+
+	
+	 <!-- ==================== Style categories =================== -->
+
+  <StyleCategoryDef>
+    <defName>BotchJob_ProfanedStyleCategory</defName>
+    <label>profaned</label>
+    <iconPath>World/WorldObjects/ProfanedFactionIcon</iconPath>
+    <soundOngoingRitual>RitualSustainer_Morbid</soundOngoingRitual>
+    <ritualVisualEffectDef>Morbid</ritualVisualEffectDef>
+    <thingDefStyles>
+      <li>
+        <thingDef>Column</thingDef>
+        <styleDef>BotchJob_ProfanedColumn</styleDef>
+      </li>
+		<li>
+        <thingDef>Altar_Grand</thingDef>
+        <styleDef>BotchJob_ProfanedAltarGrand</styleDef>
+      </li>
+	   <li MayRequire="Ludeon.RimWorld.Royalty">
+        <thingDef>Drape</thingDef>
+        <styleDef>BotchJob_ProfanedDrapeStyle</styleDef>
+      </li>
+	  <li>
+        <thingDef>EndTable</thingDef>
+        <styleDef>BotchJob_ProfanedEndTable</styleDef>
+      </li>
+	  <li>
+        <thingDef>Dresser</thingDef>
+        <styleDef>BotchJob_ProfanedDresser</styleDef>
+      </li>
+	<li>
+		<thingDef>SculptureSmall</thingDef>
+		<styleDef>BotchJob_SculptureSmallProfaned</styleDef>
+	</li>
+	<li>
+        <thingDef>SculptureLarge</thingDef>
+        <styleDef>BotchJob_SculptureLargeProfaned</styleDef>
+      </li>
+      <li>
+        <thingDef>SculptureGrand</thingDef>
+        <styleDef>BotchJob_SculptureGrandProfaned</styleDef>
+      </li>
+	  <li>
+        <thingDef>Lectern</thingDef>
+        <styleDef>BotchJob_ProfanedLectern</styleDef>
+      </li>
+	    <li>
+        <thingDef>Pew</thingDef>
+        <styleDef>BotchJob_ProfanedPew</styleDef>
+      </li>
+	  </thingDefStyles>
+	  <addDesignators>
+		<li>BotchJob_ProfanedSlabLarge</li>
+		</addDesignators>
+  </StyleCategoryDef>
+
+ <!-- ==================== Styles =================== -->
+
+  
+  <ThingStyleDef>
+    <defName>BotchJob_ProfanedColumn</defName>
+    <graphicData>
+	<graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.4,1.5)</drawSize>
+      <drawOffset>(0,0,0.2)</drawOffset>
+      <shadowData>
+        <volume>(0.3, 0.5, 0.3)</volume>
+        <offset>(0,0,-0.23)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <texPath>Things/Building/Styles/ProfanedColumn</texPath>
+    </graphicData>
+  </ThingStyleDef>
+  
+  <ThingStyleDef>
+    <defName>BotchJob_ProfanedAltarGrand</defName>
+    <graphicData>
+      <texPath>Things/Building/Styles/ProfanedAltarGrand</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	<shaderType>CutoutComplex</shaderType>
+      <drawSize>(3,3)</drawSize>
+      <shadowData>
+        <volume>(2.4, 1, 2.4)</volume>
+      </shadowData>
+    </graphicData>
+  </ThingStyleDef>
+  
+  <ThingStyleDef>
+	<defName>BotchJob_ProfanedDrapeStyle</defName>
+		<graphicData>
+		<texPath>Things/Building/Styles/ProfanedDrape</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(3.5,3.5)</drawSize>
+		<shadowData>
+			<volume>(2,0.5,0.3)</volume>
+		</shadowData>
+		</graphicData>
+	</ThingStyleDef>
+
+	<ThingStyleDef>
+	  	<defName>BotchJob_ProfanedEndTable</defName>
+		<graphicData>
+		<texPath>Things/Building/Styles/ProfanedEndTable</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<drawSize>(0.9,0.9)</drawSize>
+		<shadowData>
+			<volume>(0.3, 0.6, 0.3)</volume>
+		</shadowData>
+		</graphicData>
+    </ThingStyleDef>
+	
+	<ThingStyleDef>
+	  	<defName>BotchJob_ProfanedDresser</defName>
+		 <graphicData>
+      <texPath>Things/Building/Styles/ProfanedDresser</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,1)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    </ThingStyleDef>
+	
+	  <ThingStyleDef>
+    <defName>BotchJob_SculptureSmallProfaned</defName>
+    <graphicData>
+      <texPath>Things/Building/Styles/SculptureSmallProfaned</texPath>
+	  <graphicClass>Graphic_Random</graphicClass>
+	   <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+  </ThingStyleDef>
+	
+	<ThingStyleDef>
+    <defName>BotchJob_SculptureLargeProfaned</defName>
+    <graphicData>
+      <texPath>Things/Building/Styles/SculptureLargeProfaned</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+	   <shaderType>CutoutComplex</shaderType>
+	   <drawOffset>(0,0,0.1)</drawOffset>
+	<drawSize>(1.8,1.8)</drawSize>
+    </graphicData>
+  </ThingStyleDef>
+
+  <ThingStyleDef>
+    <defName>BotchJob_SculptureGrandProfaned</defName>
+    <graphicData>
+      <texPath>Things/Building/Styles/SculptureGrandProfaned</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+  </ThingStyleDef>
+  
+  <ThingStyleDef>
+    <defName>BotchJob_ProfanedLectern</defName>
+    <graphicData>
+      <texPath>Things/Building/Styles/ProfanedLectern</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1.4,1.4)</drawSize>
+    </graphicData>
+  </ThingStyleDef>
+  
+   <ThingStyleDef>
+    <defName>BotchJob_ProfanedPew</defName>
+    <graphicData>
+      <texPath>Things/Building/Styles/ProfanedPew</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,1)</drawSize>
+    </graphicData>
+  </ThingStyleDef>
+
+
+
+</Defs>

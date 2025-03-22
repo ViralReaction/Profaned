@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="FactionBase">
+	<defName>BotchJob_ProfanedFaction</defName>
+    <label>profaned</label>
+    <description>A legion of profaned compelled to serve a malevolent, mysterious entity, believed by many to be the source of their curse. Whoever they may have been before, it no longer matters, all that they know now is the will of their master.\n\nIn battle they make use of rot stink and undead creatures to demoralise and overwhelm their enemies.</description>
+    <colorSpectrum>
+      <li>(80, 110, 110)</li>
+    </colorSpectrum>
+    <fixedName>Profaned Legion</fixedName>
+    <factionIconPath>World/WorldObjects/ProfanedFactionIcon</factionIconPath>
+    <permanentEnemy>true</permanentEnemy>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>50</configurationListOrderPriority>
+    <pawnSingular>undead</pawnSingular>
+    <pawnsPlural>undead</pawnsPlural>
+	<xenotypeSet MayRequire="Ludeon.RimWorld.Biotech" Inherit="False">
+		<xenotypeChances>
+			<BotchJob_ProfanedXenotype MayRequire="Ludeon.RimWorld.Biotech">0.85</BotchJob_ProfanedXenotype>
+			<BotchJob_ProfanedCursebearerXenotype MayRequire="Ludeon.RimWorld.Biotech">0.15</BotchJob_ProfanedCursebearerXenotype>
+		</xenotypeChances>
+	</xenotypeSet>
+	<canStageAttacks>false</canStageAttacks>
+	<autoFlee>false</autoFlee>
+    <listOrderPriority>30</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <leaderTitle>scourge lord</leaderTitle>
+	<fixedLeaderKinds>
+		<li>BotchJob_ScourgeLord</li>
+	</fixedLeaderKinds>
+    <techLevel>Medieval</techLevel>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <allowedCultures><li>BotchJob_ProfanedCulture</li></allowedCultures>
+	<requiredMemes>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+		<li MayRequire="Ludeon.RimWorld.Ideology">Darkness</li>
+	</requiredMemes>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_FreeApproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Standard</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">BodyMod_Approved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">SleepAccelerator_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">NeuralSupercharge_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">AgeReversal_Demanded</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Abhorrent</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Horrible</li>
+      <!-- Apparel -->
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+      <!-- Nudity -->
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_Mandatory</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_Mandatory</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinOrChestDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinOrChestDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinChestOrHairDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestOrHairDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_UncoveredGroinChestHairOrFaceDisapproved</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_UncoveredGroinChestHairOrFaceDisapproved</li>
+    </disallowedPrecepts>
+    <structureMemeWeights>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+       <allowedArrivalTemperatureRange>-60~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>BotchJob_ProfanedRaidLootMaker</raidLootMaker>
+  	<maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+		<li>(70, 50)</li>
+		<li>(700, 100)</li>
+		<li>(1300, 150)</li>
+		<li>(2500, 400)</li>
+		<li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    
+
+
+    <pawnGroupMakers>
+    
+          <!-- ==================== Combat =================== -->
+
+	 <li>
+          <kindDef>Combat</kindDef>
+          <commonality>100</commonality>
+          <options>
+            <BotchJob_Wraith>10</BotchJob_Wraith>
+            <BotchJob_Ghoul>10</BotchJob_Ghoul>
+			   <BotchJob_Skeleton>15</BotchJob_Skeleton>
+	    <BotchJob_UndeadColossus>2</BotchJob_UndeadColossus>
+		 <BotchJob_ProfanedDrudge>40</BotchJob_ProfanedDrudge>
+		 <BotchJob_ProfanedHeadhunter>10</BotchJob_ProfanedHeadhunter>
+		 <BotchJob_ProfanedShieldbearer>10</BotchJob_ProfanedShieldbearer>
+			 <BotchJob_ProfanedSoldier>30</BotchJob_ProfanedSoldier>
+			  <BotchJob_ScourgeKnight>2</BotchJob_ScourgeKnight>
+			   <BotchJob_Gravetender>2</BotchJob_Gravetender>
+			   <BotchJob_CryptLurker>2</BotchJob_CryptLurker>
+			  <BotchJob_UndeadWarg>5</BotchJob_UndeadWarg>
+          </options>
+        </li>
+
+        <li>
+          <kindDef>Settlement</kindDef>
+          <options>
+		<BotchJob_Wraith>10</BotchJob_Wraith>
+            <BotchJob_Ghoul>10</BotchJob_Ghoul>
+			   <BotchJob_Skeleton>15</BotchJob_Skeleton>
+	    <BotchJob_UndeadColossus>2</BotchJob_UndeadColossus>
+		 <BotchJob_ProfanedDrudge>40</BotchJob_ProfanedDrudge>
+		 <BotchJob_ProfanedHeadhunter>10</BotchJob_ProfanedHeadhunter>
+		 <BotchJob_ProfanedShieldbearer>10</BotchJob_ProfanedShieldbearer>
+			 <BotchJob_ProfanedSoldier>30</BotchJob_ProfanedSoldier>
+			  <BotchJob_ScourgeKnight>2</BotchJob_ScourgeKnight>
+			   <BotchJob_Gravetender>2</BotchJob_Gravetender>
+			   <BotchJob_CryptLurker>2</BotchJob_CryptLurker>
+			  <BotchJob_UndeadWarg>5</BotchJob_UndeadWarg>
+			  <BotchJob_UndeadHorse>5</BotchJob_UndeadHorse>
+			 <BotchJob_ScourgeLord>1</BotchJob_ScourgeLord>
+          </options>
+        </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+
+  </FactionDef>
+
+  <ThingSetMakerDef>
+    <defName>BotchJob_ProfanedRaidLootMaker</defName>
+    <root Class="ThingSetMaker_MarketValue">
+      <fixedParams>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+            <li>Gold</li>
+            <li>MedicineHerbal</li>
+          </thingDefs>
+        </filter>
+      </fixedParams>
+    </root>
+  </ThingSetMakerDef>
+  
+  <!-- ==================== Culture =================== -->
+
+	<CultureDef>
+    <defName>BotchJob_ProfanedCulture</defName>
+    <label>profaned</label>
+    <description>These people are cursed to exist in a state between life and death.\n\nAlthough they yet retain their humanity, the Profaned are shunned and exiled by most cultures.</description>
+    <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoKriminul</ideoNameMaker>
+<deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityKriminul</deityNameMaker>
+<deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerKriminul</deityTypeMaker>
+<leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">LeaderTitleMaker_Rustican</leaderTitleMaker>
+<festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalKriminul</festivalNameMaker>
+    <allowedPlaceTags>
+      <li>OriginSpacer</li>
+    </allowedPlaceTags>
+    <iconPath>World/WorldObjects/ProfanedFactionIcon</iconPath>
+    <styleItemTags>
+      <li>
+        <tag>Rural</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoBeard</tag>
+        <baseWeight>10</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>BeardRural</tag>
+        <baseWeight>0.25</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+      <li>
+        <tag>NoTattoo</tag>
+        <baseWeight>1</baseWeight>
+        <weightFactor>1</weightFactor>
+      </li>
+    </styleItemTags>
+  </CultureDef>
+  
+    <FactionDef ParentName="PlayerFactionBase">
+	<defName>BotchJob_ProfanedPlayerFaction</defName>
+	<label>Profaned Cursebearers</label>
+	<description>Profaned cursebearers seeking to spread their curse.</description>
+	<isPlayer>true</isPlayer>
+	<pawnSingular>cursebearer</pawnSingular>
+	<pawnsPlural>cursebearers</pawnsPlural>
+	<basicMemberKind>BotchJob_ProfanedCursebearer</basicMemberKind>
+	<colorSpectrum>
+		<li>(0, 0.737, 0.847)</li>
+	</colorSpectrum>
+	<techLevel>Medieval</techLevel>
+	<backstoryFilters>
+		<li>
+			<categories>
+				<li>Tribal</li>
+			</categories>
+		</li>
+	</backstoryFilters>
+	<factionIconPath>World/WorldObjects/ProfanedFactionIcon</factionIconPath>
+	<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+	<factionNameMaker>NamerFactionTribal</factionNameMaker>
+	<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+	<allowedCultures>
+		<li>BotchJob_ProfanedCulture</li>
+	</allowedCultures>
+	<forageabilityFactor>1.7</forageabilityFactor>
+	<startingResearchTags>
+		<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_MedievalStart</li>
+		<li>TribalStart</li>
+	</startingResearchTags>
+	</FactionDef>
+
+<MemeDef MayRequire="Ludeon.RimWorld.Ideology">
+    <defName>BotchJob_ProfanedMeme</defName>
+    <label>one with death</label>
+    <description>We have been touched by death and are indifferent to its cold embrace.</description>
+    <iconPath>UI/Icons/ProfanedMeme</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>1</impact>
+    <renderOrder>999</renderOrder>
+    <requireOne>
+      <li>
+        <li>Corpses_DontCare</li>
+      </li>
+      <li>
+        <li>Execution_DontCare</li>
+      </li>
+	  <li>
+        <li>Slavery_Acceptable</li>
+      </li>
+      <li>
+        <li>OrganUse_Acceptable</li>
+      </li>
+	  <li>
+        <li>Cannibalism_Acceptable</li>
+      </li>
+    </requireOne>
+   <replacementPatterns>
+		<li>SacrificePrisoner</li>
+		<li>GladiatorDuel</li>
+	</replacementPatterns>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->profaned</li>
+        <li>memeAdjective->sacrilegious</li>
+        <li>memeAdjective->defiled</li>
+        <li>memeAdjective->unholy</li>
+		<li>memeAdjective->undead</li>
+        <li>memeAdjective->blasphemous</li>
+		<li>memeCreed->cult</li>
+		<li>memeCreed->legion</li>
+		<li>memeCreed->horde</li>
+		<li>memeCreed->congregation</li>
+		<li>memeCreed->contingent</li>
+        <li>memeHyphenPrefix->death</li>
+        <li>memeConcept->scourge</li>
+        <li>memeConcept->decay</li>
+        <li>memeConcept->dread</li>
+        <li>memeConcept->rot</li>
+        <li>memeConcept->grim</li>
+        <li>memeLeaderNoun->lord</li>
+        <li>memeLeaderNoun->commander</li>
+        <li>memeLeaderNoun->herald</li>
+        <li>memeLeaderNoun->master</li>
+        <li>memeLeaderNoun->overlord</li>
+        <li>memeMoralist->cleric</li>
+        <li>memeMoralist->maester</li>
+		<li>memeMoralist->elder</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+          <!-- theist myth -->
+          <li>creation(tag=meme_BotchJob_ProfanedMeme)        ->[deity0_name] went to [deity0_possessive] brother and cursed him, causing his flesh to rot, creating the first profaned among the gods.</li>
+          <li>episode(uses=1,tag=meme_BotchJob_ProfanedMeme)  ->The [deity0_type] [deity0_name] defiled the bodies of [deity0_possessive] enemies.</li>
+          <!-- theist founder -->
+          <li>intro(tag=meme_BotchJob_ProfanedMeme)           ->On the [place_summary] [place_name], there was a human named [deity0_name]. After [deity0_possessive] father died, [deity0_name] inherited the curse and became the [deity0_type].</li>
+          <li>intro(tag=meme_BotchJob_ProfanedMeme)           ->On the [place_summary] [place_name], during the [ritualName], [deity0_name] came down into the [altarRoomLabel] and cursed humans in front of the [memberNamePlural].</li>
+          <li>conflict(tag=meme_BotchJob_ProfanedMeme)        ->A [foeLeader] declared that all curse-bearers were criminals, and sent [foeSoldiers] to persecute the [memberNamePlural].</li>
+          <li>founderJoin(tag=meme_BotchJob_ProfanedMeme)     ->A [place_job] named [founderName] was attacked by one of the [foeLeader]'s [foeSoldiers]. [founderName] killed [foeLeader_objective] with a [place_personalWeapon], cursed [foeLeader_possessive], and gained [deity0_name]'s strength.</li>
+          <li>victory(tag=meme_BotchJob_ProfanedMeme)         ->[founderName] led a group of [memberNamePlural] into the [place_powerCenter], killed the [foeLeader], and cursed [foeLeader_possessive]. [deity0_name] made [founderName] into the new [foeLeader].</li>
+          <!-- ideological founder -->
+          <li>setup(tag=meme_BotchJob_ProfanedMeme)           ->[founderName] crashlanded on a distant world. Lacking food and surrounded by dead companions, [founder_pronoun] accepted the curse, and became strong.</li>
+          <li>story(uses=1,tag=meme_BotchJob_ProfanedMeme)    ->To consecrate their commitment, [founderName] demanded that believers spread their curse across the realm.</li>
+          <!-- ideological lesson -->
+          <li>lessonIntro(tag=meme_BotchJob_ProfanedMeme)         ->It's only in death that I could ever get people to understand the truth: That</li>
+          <li>lesson(tag=meme_BotchJob_ProfanedMeme)              ->you never really come together with someone until the end</li>
+          <li>lessonReinforcement(tag=meme_BotchJob_ProfanedMeme) ->Every time I curse a foe with a new friend, I make sure they understand this.</li>
+          <!-- archist -->
+          <li>archistBasis(tag=meme_BotchJob_ProfanedMeme)    ->The archotech god-machines made themselves by consuming their predecessors over and over, becoming stronger each time.</li>
+          <li>archistFact(tag=meme_BotchJob_ProfanedMeme)     ->As the consciousness of an archotech expands, it must grow its substrate by consuming and merging with other machines.</li>
+          <li>archistProphecy(tag=meme_BotchJob_ProfanedMeme) ->[inTheEnd], the archotechs will finish their final phase of growth by consuming and merging with all of humanity.</li>
+          <!-- animist -->
+          <li>animistBasis(tag=meme_BotchJob_ProfanedMeme)    ->Spirits infuse all objects around us, and we can spread to curse to them. There are no spirits as powerful as the ones that inhabit humans.</li>
+          <li>animistFact(tag=meme_BotchJob_ProfanedMeme)     ->We can absorb the spirit and power of others by accepting the curse.</li>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Profaned</ideoName>
+        <theme>profaned</theme>
+        <adjective>profane</adjective>
+        <member>profaned</member>
+      </li>
+      <li>
+        <ideoName>Defiled</ideoName>
+        <theme>defiled</theme>
+        <adjective>defiled</adjective>
+        <member>defiled</member>
+      </li>
+      <li>
+        <ideoName>Unholy</ideoName>
+        <theme>unholy</theme>
+        <adjective>unholy</adjective>
+        <member>unholy</member>
+      </li>
+	   <li>
+        <ideoName>Undead</ideoName>
+        <theme>undead</theme>
+        <adjective>undead</adjective>
+        <member>undead</member>
+      </li>
+	  <li>
+        <ideoName>Blasphemous</ideoName>
+        <theme>blasphemous</theme>
+        <adjective>blasphemous</adjective>
+        <member>blasphemous</member>
+      </li>
+	  <li>
+        <ideoName>Scourged</ideoName>
+        <theme>scourged</theme>
+        <adjective>scourged</adjective>
+        <member>scourged</member>
+      </li>
+    </symbolPacks>
+    <thingStyleCategories>
+	 <li>
+        <category>BotchJob_ProfanedStyleCategory</category>
+        <priority>3</priority>
+      </li>
+    </thingStyleCategories>
+    <ritualsToMake>1</ritualsToMake>
+    <replaceRitualsWithTags><li>CelebratedDate</li></replaceRitualsWithTags>
+    <agreeableTraits>
+      <li>Psychopath</li>
+    </agreeableTraits>
+  </MemeDef>
+
+
+</Defs>
+

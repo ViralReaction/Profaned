@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  
+  <EggProgress>Progress</EggProgress>
+  <HatchesIn>Time left</HatchesIn>
+  <BotchJob_LuminousDustProduction>Luminous dust production</BotchJob_LuminousDustProduction>
+  <LetterLabelBotchJob_WanderingUndead>Wandering undead</LetterLabelBotchJob_WanderingUndead>
+	<LetterBotchJob_WanderingUndead>A horde of undead creatures are passing though the area.\n\nThey don't seem to notice us and should should leave the area soon if left unprovoked.\n\nUndead creatures are very dangerous but can be harvested for rare crafting components if killed.</LetterBotchJob_WanderingUndead>
+	<LetterLabelBotchJob_WanderingUndeadDragon>Wandering undead dragon</LetterLabelBotchJob_WanderingUndeadDragon>
+	<LetterBotchJob_WanderingUndeadDragon>An undead dragon is passing through the area.\n\nDragons are extremely dangerous and unpredictable creatures, one that has somehow defied death is likely to be even more so. It would probably be wise to avoid it unless we are very prepared.\n\nThe undead dragon should leave the area soon if left unprovoked.</LetterBotchJob_WanderingUndeadDragon>
+
+</LanguageData>

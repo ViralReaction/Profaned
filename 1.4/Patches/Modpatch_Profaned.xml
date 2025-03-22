@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+<Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThoughtDef[defName ="DeadMansApparel" or defName ="ButcheredHumanlikeCorpse" or defName ="KnowButcheredHumanlikeCorpse" or defName="ButcheredHumanlikeCorpseOpinion" or defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse"]/nullifyingGenes</xpath>
+	<nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThoughtDef[defName ="DeadMansApparel" or defName ="ButcheredHumanlikeCorpse" or defName ="KnowButcheredHumanlikeCorpse" or defName="ButcheredHumanlikeCorpseOpinion" or defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse"]</xpath>
+      <value>
+        <nullifyingGenes/>
+      </value>
+    </nomatch>
+  </Operation>
+	
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThoughtDef[defName ="DeadMansApparel" or defName ="ButcheredHumanlikeCorpse" or defName ="KnowButcheredHumanlikeCorpse" or defName="ButcheredHumanlikeCorpseOpinion" or defName="ObservedLayingCorpse" or defName="ObservedLayingRottingCorpse"]/nullifyingGenes</xpath>
+		<value>
+				<li MayRequire="Ludeon.RimWorld.Biotech">BotchJob_UndeadPsysiology</li>
+		</value>
+	</Operation>
+
+
+<!-- ==================== VFE =================== -->
+
+		
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Expanded Framework</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName ="BotchJob_ProfanedStaff"]</xpath>
+    <value>
+		  <equippedAngleOffset>45</equippedAngleOffset>
+         </value>
+	</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Expanded Framework</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName ="BotchJob_BloodflameStaff"]</xpath>
+    <value>
+		  <equippedAngleOffset>45</equippedAngleOffset>
+         </value>
+	</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Expanded Framework</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName ="BotchJob_ProfanedShieldbearer"]/apparelRequired</xpath>
+    <value>
+		<li>BotchJob_ProfanedShield</li>
+         </value>
+	</match>
+	</Operation>
+	
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Expanded Framework</li>
+  </mods>
+  <nomatch Class="PatchOperationAdd">
+    <xpath>Defs</xpath>
+    <value>
+		  <GeneDef MayRequire="Ludeon.RimWorld.Biotech">
+		<defName>BotchJob_RottingFleshBasic</defName>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>3</biostatMet>
+		<displayCategory>Cosmetic_Skin</displayCategory>
+		<iconPath>UI/Icons/Genes/Gene_SkinColorOverride</iconPath>
+		<statOffsets>
+			<PawnBeauty>-2</PawnBeauty>
+		</statOffsets>
+		<exclusionTags>
+			<li>SkinColorOverride</li>
+		</exclusionTags>
+		<randomBrightnessFactor>0.18</randomBrightnessFactor>
+		<label>rotting flesh</label>
+		<labelShortAdj>rotting</labelShortAdj>
+		<description>Carriers of this gene have rotting, greyish-green skin.</description>
+		<skinColorOverride>(90, 95, 90)</skinColorOverride>
+		<displayOrderInCategory>65</displayOrderInCategory>
+  </GeneDef>
+         </value>
+	</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Expanded Framework</li>
+  </mods>
+  <nomatch Class="PatchOperationReplace">
+    <xpath>/Defs/XenotypeDef[defName ="BotchJob_ProfanedXenotype"]/genes</xpath>
+    <value>
+		   <genes>
+      <li>Head_Gaunt</li>
+	  <li>BotchJob_UndeadPsysiology</li>
+	  <li>Hair_Gray</li>
+	  <li>BotchJob_UnnaturalColdResistance</li>
+		    <li>BotchJob_UndeadHeatWeakness</li>
+			  <li>BotchJob_UndeadPainlessness</li>
+			    <li>BotchJob_DecomposingBody</li>
+				 <li>BotchJob_DaylightAversion</li>
+				  <li>Sterile</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>BotchJob_RottingFleshBasic</li>
+    </genes>
+         </value>
+	</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Vanilla Expanded Framework</li>
+  </mods>
+  <nomatch Class="PatchOperationReplace">
+    <xpath>/Defs/XenotypeDef[defName ="BotchJob_ProfanedCursebearerXenotype"]/genes</xpath>
+    <value>
+		   <genes>
+       <li>Head_Gaunt</li>
+	  <li>BotchJob_UndeadPsysiology</li>
+	  <li>Hair_Gray</li>
+	  <li>BotchJob_UnnaturalColdResistance</li>
+		    <li>BotchJob_UndeadHeatWeakness</li>
+			  <li>BotchJob_UndeadPainlessness</li>
+			    <li>BotchJob_DecomposingBody</li>
+				 <li>BotchJob_DaylightAversion</li>
+				  <li>Sterile</li>
+	  <li>Beard_NoBeardOnly</li>
+	  <li>BotchJob_RottingFleshBasic</li>
+	  <li>BotchJob_Cursebearer</li>
+    </genes>
+         </value>
+	</nomatch>
+	</Operation>
+	
+	<!-- ==================== DBH =================== -->
+	
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Dubs Bad Hygiene</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>/Defs/GeneDef[defName ="BotchJob_UndeadPsysiology"]/statFactors</xpath>
+		<value>
+			<ThirstRateMultiplier>0</ThirstRateMultiplier>
+			<BladderRateMultiplier>0</BladderRateMultiplier>
+			<HygieneRateMultiplier>0</HygieneRateMultiplier>
+		</value>
+	</match>
+	</Operation>
+	
+	<!-- ==================== LTS =================== -->
+	
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>[LTS]Systems</li>
+  </mods>
+  <match Class="PatchOperationAdd">
+    <xpath>Defs</xpath>
+    <value>
+		 <ThingDef ParentName="LTS_Buildings">
+	<defName>BotchJob_ProfanedGate</defName>
+	<label>profaned cathedral doors</label>
+	<description>Large and imposing double doors. They are very sturdy but heavy and slow to open</description>
+	<thingClass>LTS_Systems.ThingWithComps.Building_Door</thingClass>
+	<designationCategory>Structure</designationCategory>
+	<altitudeLayer>DoorMoveable</altitudeLayer>
+	<fillPercent>1</fillPercent>
+	<useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>
+	<tickerType>Normal</tickerType>
+	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+	<useStuffTerrainAffordance>true</useStuffTerrainAffordance>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	<holdsRoof>true</holdsRoof>
+	<blockLight>true</blockLight>
+	<drawerType>RealtimeOnly</drawerType>
+	<statBases>
+		<MaxHitPoints>600</MaxHitPoints>
+		<WorkToBuild>4000</WorkToBuild>
+		<DoorOpenSpeed>0.8</DoorOpenSpeed>
+	</statBases>
+	<stuffCategories>
+		<li>Stony</li>
+		<li>Metallic</li>
+	</stuffCategories>
+	<costStuffCount>100</costStuffCount>
+	 <researchPrerequisites>
+	  <li>BotchJob_ProfanedBasics</li>
+    </researchPrerequisites>
+	<graphicData>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<texPath>Things/Building/Other/ProfanedGate</texPath>
+		<drawSize>(2.0,1.5)</drawSize>
+		<drawOffsetNorth>(0,0,0.25)</drawOffsetNorth>
+		<drawOffsetSouth>(0,0,0.25)</drawOffsetSouth>
+		<shadowData>
+			<volume>(0.3, 0.5, 0.3)</volume>
+		</shadowData>
+		<damageData>
+			<enabled>false</enabled>
+		</damageData>
+	</graphicData>
+	<size>(2,1)</size>
+	<uiIconPath>Things/Building/Other/ProfanedGateIcon</uiIconPath>
+	<uiIconScale>1.4</uiIconScale>
+	<building>
+		<isInert>true</isInert>
+		<ai_chillDestination>false</ai_chillDestination>
+		<paintable>true</paintable>
+		<canPlaceOverWall>true</canPlaceOverWall>
+		<soundDoorOpenPowered>Door_OpenPowered</soundDoorOpenPowered>
+		<soundDoorClosePowered>Door_ClosePowered</soundDoorClosePowered>
+		<soundDoorOpenManual>Door_OpenManual</soundDoorOpenManual>
+		<soundDoorCloseManual>Door_CloseManual</soundDoorCloseManual>
+		<blueprintGraphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<texPath>Things/Building/Other/ProfanedGate_Blueprint</texPath>
+			<drawSize>(2.0,1.5)</drawSize>
+			<drawOffsetNorth>(0,0,0.25)</drawOffsetNorth>
+			<drawOffsetSouth>(0,0,0.25)</drawOffsetSouth>
+		</blueprintGraphicData>
+	</building>
+	<comps>
+		<li Class="CompProperties_Forbiddable">
+			<allowNonPlayer>true</allowNonPlayer>
+		</li>
+	</comps>
+	<placeWorkers>
+		<li>PlaceWorker_DoorLearnOpeningSpeed</li>
+	</placeWorkers>
+	<rotatable>true</rotatable>
+	<uiOrder>1600</uiOrder>
+	<modExtensions>
+		<li Class="LTS_Systems.DefModExtensions.DoorExtension"/>
+	</modExtensions>
+	</ThingDef>
+         </value>
+	</match>
+	</Operation>
+	
+	<!-- ==================== Time Kills =================== -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Time Kills</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+		<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="BotchJob_UndeadPsysiology"]/hediffGiversCannotGive</xpath>
+					<value>
+						<li>TK_OldAge</li>
+						<li>TK_Degradation</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/GeneDef[defName="BotchJob_UndeadPsysiology"]/makeImmuneTo</xpath>
+					<value>
+						<li>TK_OldAge</li>
+						<li>TK_Degradation</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	
+	<!-- ==================== Royalty =================== -->
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Royalty</li>
+		</mods>
+		<nomatch Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName ="BotchJob_ProfanedThrone"]/thingClass</xpath>
+		<value>
+			<thingClass>Building</thingClass>
+		</value>
+	</nomatch>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Royalty</li>
+  </mods>
+	<match Class="PatchOperationAdd">
+	    <xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+	    <value>
+	    	<li>BotchJob_ProfanedPlayerFaction</li>
+		</value>
+		</match>
+	</Operation>
+	
+
+	
+		<!-- ==================== Biotech =================== -->
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Biotech</li>
+  </mods>
+  <nomatch Class="PatchOperationRemove">
+    <xpath>/Defs/ResearchProjectDef[defName ="BotchJob_ProfanedBasics" or "BotchJob_ProfanedAdvanced" or "BotchJob_ProfanedAlchemy"]/requiredStudied</xpath>
+	</nomatch>
+	</Operation>	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Biotech</li>
+  </mods>
+  <nomatch Class="PatchOperationReplace">
+    <xpath>/Defs/ScenarioDef[defName ="BotchJob_ProfanedStart"]/scenario/parts/li[@Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes"]</xpath>
+	<value>
+		<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+			<def>ConfigPage_ConfigureStartingPawns</def>
+			<pawnCount>3</pawnCount>
+			<pawnChoiceCount>6</pawnChoiceCount>
+		</li>
+		</value>
+	</nomatch>
+	</Operation>	
+	
+	
+	
+	<!-- ==================== Medieval Overhaul =================== -->
+	
+	
+
+</Patch>
