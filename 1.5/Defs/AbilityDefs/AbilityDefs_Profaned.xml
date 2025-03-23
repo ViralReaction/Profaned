@@ -12,7 +12,7 @@
 		<jobDef>CastAbilityOnThingMelee</jobDef>
 		<iconPath>UI/Icons/Misc/BotchJob_BestowCurseIcon</iconPath>
 		<warmupStartSound>ReimplantXenogerm_Cast</warmupStartSound>
-		<!-- <warmupEffecter>BotchJob_BestowCurseEffect</warmupEffecter> -->
+		<warmupEffecter>BotchJob_BestowCurseEffect</warmupEffecter>
 		<displayOrder>500</displayOrder>
 		<hostile>false</hostile>
 		<verbProperties>

@@ -15,5 +15,7 @@
 	
 	<CommandBestowCurse>Bestow Curse</CommandBestowCurse>
 	<CommandBestowCurseDesc>Force this person to implant their xenogenes into another individual using a special injector organ. If this person's genes are currently regrowing, they will die in the process.\n\nWhen implanted, a xenogerm will overwrite the target's xenogenes. Germline genes will be unaffected.</CommandBestowCurseDesc>
+	
+	<MessageCannotUseOnUndead>{0_labelShort} is already undead.</MessageCannotUseOnUndead>
 
 </LanguageData>

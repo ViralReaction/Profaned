@@ -37,14 +37,30 @@ namespace Profaned
             caster.health.AddHediff(hediffOnCaster, null, null, null);
 
         }
-        public static bool SameXenotype(Pawn pawn, XenotypeDef xenotype)
+        public static bool SameXenotype(Pawn pawn, Pawn caster, XenotypeDef xenotype)
         {
-            if (pawn?.genes == null)
+            var pawnGenes = pawn?.genes;
+            var casterGenes = caster?.genes;
+            if (pawnGenes == null || casterGenes == null)
             {
                 return false;
             }
-            return pawn.genes.Xenotype == xenotype;
+            if (!pawnGenes.UniqueXenotype)
+            {
+                return pawnGenes.Xenotype == xenotype || pawnGenes.Xenotype == casterGenes.Xenotype;
+            }
+            if (casterGenes.UniqueXenotype)
+            {
+                var pawnCustomXenotype = pawnGenes.CustomXenotype;
+                var casterCustomXenotype = casterGenes.CustomXenotype;
 
+                if (pawnCustomXenotype != null && casterCustomXenotype != null)
+                {
+                    return pawnCustomXenotype.name == casterCustomXenotype.name;
+                }
+                return false;
+            }
+            return false;
         }
 
     }

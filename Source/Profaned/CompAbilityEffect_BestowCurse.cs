@@ -17,7 +17,6 @@ namespace Profaned
             }
         }
 
-
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             if (!ModLister.CheckBiotech("xenogerm reimplantation"))
@@ -95,24 +94,15 @@ namespace Profaned
                 Log.Error($"Profaned: {this.parent.def} is missing required mod extension");
                 return false;
             }
-            if (Utility_Profaned.SameXenotype(pawn, modExtension.xenotypeDef))
+            if (Utility_Profaned.SameXenotype(pawn, this.parent.pawn, modExtension.xenotypeDef))
             {
                 if (throwMessages)
                 {
-                    Messages.Message("MessageCannotUseOnSameXenotype".Translate(pawn), pawn, MessageTypeDefOf.RejectInput, false);
+                    Messages.Message("MessageCannotUseOnUndead".Translate(pawn), pawn, MessageTypeDefOf.RejectInput, false);
                 }
                 return false;
             }
             return base.Valid(target, throwMessages);
-        }
-
-        public override Window ConfirmationDialog(LocalTargetInfo target, Action confirmAction)
-        {
-            if (GeneUtility.PawnWouldDieFromReimplanting(this.parent.pawn))
-            {
-                return Dialog_MessageBox.CreateConfirmation("WarningPawnWillDieFromReimplanting".Translate(this.parent.pawn.Named("PAWN")), confirmAction, true, null, WindowLayer.Dialog);
-            }
-            return null;
         }
 
         public override IEnumerable<Mote> CustomWarmupMotes(LocalTargetInfo target)
