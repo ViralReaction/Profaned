@@ -11,7 +11,7 @@ namespace Profaned
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             Map target = (Map)parms.target;
-            return !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && (!ModsConfig.BiotechActive || !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze)) && target.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(ThingDefOf.BotchJob_UndeadColossus) && this.TryFindEntryCell(target, out IntVec3 _);
+            return !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && (!ModsConfig.BiotechActive || !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze)) && target.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(ThingDefOf_Profaned.BotchJob_UndeadColossus) && this.TryFindEntryCell(target, out IntVec3 _);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -20,10 +20,10 @@ namespace Profaned
             IntVec3 cell;
             if (!this.TryFindEntryCell(target, out cell))
                 return false;
-            PawnKindDef BotchJob_UndeadColossus = PawnKindDefOf.BotchJob_UndeadColossus;
-            PawnKindDef BotchJob_Ghoul = PawnKindDefOf.BotchJob_Ghoul;
-            PawnKindDef BotchJob_Skeleton = PawnKindDefOf.BotchJob_Skeleton;
-            PawnKindDef BotchJob_Wraith = PawnKindDefOf.BotchJob_Wraith;
+            PawnKindDef BotchJob_UndeadColossus = PawnKindDefOf_Profaned.BotchJob_UndeadColossus;
+            PawnKindDef BotchJob_Ghoul = PawnKindDefOf_Profaned.BotchJob_Ghoul;
+            PawnKindDef BotchJob_Skeleton = PawnKindDefOf_Profaned.BotchJob_Skeleton;
+            PawnKindDef BotchJob_Wraith = PawnKindDefOf_Profaned.BotchJob_Wraith;
             int num1 = Mathf.Clamp(GenMath.RoundRandom(StorytellerUtility.DefaultThreatPointsNow((IIncidentTarget)target) / BotchJob_UndeadColossus.combatPower), 1, Rand.RangeInclusive(1, 2));
             int num2 = Mathf.Clamp(GenMath.RoundRandom(StorytellerUtility.DefaultThreatPointsNow((IIncidentTarget)target) / BotchJob_Ghoul.combatPower), 2, Rand.RangeInclusive(2, 5));
             int num3 = Rand.RangeInclusive(90000, 150000);

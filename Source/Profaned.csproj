@@ -27,14 +27,16 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CompAbilityEffect_BestowCurse.cs" />
+    <Compile Include="CompProperties_AbilityBestowCurse.cs" />
     <Compile Include="IncidentWorker_BotchJob_WanderingUndeadDragon.cs" />
-    <Compile Include="ThingDef_Profaned.cs" />
+    <Compile Include="ThingDefOf_Profaned.cs" />
     <Compile Include="PawnKindDefOf_Profaned.cs" />
     <Compile Include="IncidentWorker_BotchJob_WanderingUndead.cs" />
     <Compile Include="HatcherExtension.cs" />
@@ -51,7 +53,8 @@
       <Version>1.5.4402</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-      <Version>2.3.5</Version>
+		<ExcludeAssets>runtime</ExcludeAssets>
+		<Version>2.3.5</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

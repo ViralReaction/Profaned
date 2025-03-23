@@ -5,7 +5,7 @@ using Verse;
 namespace Profaned
 {
     [DefOf]
-    public static class PawnKindDefOf
+    public static class PawnKindDefOf_Profaned
     {
         public static PawnKindDef BotchJob_UndeadColossus;
         public static PawnKindDef BotchJob_Ghoul;
@@ -15,7 +15,7 @@ namespace Profaned
 
 
 
-        static PawnKindDefOf() => DefOfHelper.EnsureInitializedInCtor(typeof(PawnKindDefOf));
+        static PawnKindDefOf_Profaned() => DefOfHelper.EnsureInitializedInCtor(typeof(PawnKindDefOf_Profaned));
     }
 }
 

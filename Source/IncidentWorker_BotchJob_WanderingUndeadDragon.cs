@@ -11,7 +11,7 @@ namespace Profaned
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             Map target = (Map)parms.target;
-            return !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && (!ModsConfig.BiotechActive || !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze)) && target.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(ThingDefOf.BotchJob_UndeadColossus) && this.TryFindEntryCell(target, out IntVec3 _);
+            return !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && (!ModsConfig.BiotechActive || !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze)) && target.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(ThingDefOf_Profaned.BotchJob_UndeadColossus) && this.TryFindEntryCell(target, out IntVec3 _);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)
@@ -20,7 +20,7 @@ namespace Profaned
             IntVec3 cell;
             if (!this.TryFindEntryCell(target, out cell))
                 return false;
-            PawnKindDef BotchJob_UndeadDragon = PawnKindDefOf.BotchJob_UndeadDragon;
+            PawnKindDef BotchJob_UndeadDragon = PawnKindDefOf_Profaned.BotchJob_UndeadDragon;
             int num1 = Mathf.Clamp(GenMath.RoundRandom(StorytellerUtility.DefaultThreatPointsNow((IIncidentTarget)target) / BotchJob_UndeadDragon.combatPower), 1, Rand.RangeInclusive(1, 2));
             int num2 = Rand.RangeInclusive(90000, 150000);
             IntVec3 result = IntVec3.Invalid;
