@@ -33,14 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CompAbilityEffect_BestowCurse.cs" />
-    <Compile Include="CompProperties_AbilityBestowCurse.cs" />
-    <Compile Include="IncidentWorker_BotchJob_WanderingUndeadDragon.cs" />
-    <Compile Include="ThingDefOf_Profaned.cs" />
-    <Compile Include="PawnKindDefOf_Profaned.cs" />
-    <Compile Include="IncidentWorker_BotchJob_WanderingUndead.cs" />
-    <Compile Include="HatcherExtension.cs" />
-    <Compile Include="ProfanedHatcherPatch.cs" />
+    <Compile Include="Profaned\CompAbilityEffect_BestowCurse.cs" />
+    <Compile Include="Profaned\CompProperties_AbilityBestowCurse.cs" />
+    <Compile Include="Profaned\Extensions\RevivalCurseExtension.cs" />
+    <Compile Include="Profaned\IncidentWorker_BotchJob_WanderingUndeadDragon.cs" />
+    <Compile Include="Profaned\Utility_Profaned.cs" />
+    <Compile Include="Profaned\DefOf\DefOf_Profaned.cs" />
+    <Compile Include="Profaned\DefOf\PawnKindDefOf_Profaned.cs" />
+    <Compile Include="Profaned\IncidentWorker_BotchJob_WanderingUndead.cs" />
+    <Compile Include="Profaned\Extensions\HatcherExtension.cs" />
+    <Compile Include="Profaned\ProfanedHatcherPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,8 +55,8 @@
       <Version>1.5.4402</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
-		<ExcludeAssets>runtime</ExcludeAssets>
-		<Version>2.3.5</Version>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <Version>2.3.5</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

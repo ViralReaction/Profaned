@@ -25,12 +25,22 @@
 				<canTargetSelf>false</canTargetSelf>
 				<canTargetBuildings>false</canTargetBuildings>
 				<canTargetMechs>false</canTargetMechs>
+				<canTargetPawns>false</canTargetPawns>
 				<canTargetCorpses>true</canTargetCorpses>
 			</targetParams>
 		</verbProperties>
 		<comps>
 			<li Class="Profaned.CompProperties_AbilityBestowCurse"/>
 		</comps>
+		<modExtensions>
+			<li Class="Profaned.RevivalCurseExtension">
+				<hediffOnTarget>BotchJob_ReceivedCurseSickness</hediffOnTarget>
+				<secondHediffOnTarget>BotchJob_ReceivedCurseWeakness</secondHediffOnTarget>
+				<hediffOnCaster>BotchJob_BestowCurseSickness</hediffOnCaster>
+				<xenotypeDef>BotchJob_ProfanedXenotype</xenotypeDef>
+				<targetThought>BotchJob_UndeadRevival</targetThought>
+			</li>
+		</modExtensions>
 	</AbilityDef>
 
 </Defs>

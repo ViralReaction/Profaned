@@ -33,8 +33,8 @@
 	</HediffDef>
 
 	<HediffDef>
-		<defName>BotchJob_RecievedCurseSickness</defName>
-		<label>recently recieved curse</label>
+		<defName>BotchJob_ReceivedCurseSickness</defName>
+		<label>undead resurrection</label>
 		<description>A xenogerm was implanted in this person. The xenogerm needs time to integrate itself into the host and modify the genes and chemistry of various tissues throughout the body. During this time, the person cannot safely wake up, so the xenogerm keeps them in a coma.\n\nThe duration of this coma can be reduced by implanting a xenogerm with better medical facilities and more skilled doctors.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<initialSeverity>0.001</initialSeverity>
@@ -52,6 +52,37 @@
 		<comps>
 			<li Class="HediffCompProperties_Disappears">
 				<disappearsAfterTicks>120000</disappearsAfterTicks><!-- Average coma duration based on ImplantXenogerm surgery outcome. -->
+				<showRemainingTime>true</showRemainingTime>
+				<canUseDecimalsShortForm>true</canUseDecimalsShortForm>
+			</li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>BotchJob_ReceivedCurseWeakness</defName>
+		<label>curse weakness</label>
+		<description>A xenogerm was implanted in this person. The xenogerm needs time to integrate itself into the host and modify the genes and chemistry of various tissues throughout the body. During this time, the person cannot safely wake up, so the xenogerm keeps them in a coma.\n\nThe duration of this coma can be reduced by implanting a xenogerm with better medical facilities and more skilled doctors.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0.001</initialSeverity>
+		<defaultLabelColor>(0.9, 1.0, 0.35)</defaultLabelColor>
+		<stages>
+			<li>
+				<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>-0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>360000</disappearsAfterTicks><!-- Average coma duration based on ImplantXenogerm surgery outcome. -->
 				<showRemainingTime>true</showRemainingTime>
 				<canUseDecimalsShortForm>true</canUseDecimalsShortForm>
 			</li>

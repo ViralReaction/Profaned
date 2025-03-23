@@ -11,7 +11,7 @@ namespace Profaned
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             Map target = (Map)parms.target;
-            return !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && (!ModsConfig.BiotechActive || !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze)) && target.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(ThingDefOf_Profaned.BotchJob_UndeadColossus) && this.TryFindEntryCell(target, out IntVec3 _);
+            return !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.ToxicFallout) && (!ModsConfig.BiotechActive || !target.gameConditionManager.ConditionIsActive(GameConditionDefOf.NoxiousHaze)) && target.mapTemperature.SeasonAndOutdoorTemperatureAcceptableFor(DefOf_Profaned.BotchJob_UndeadColossus) && this.TryFindEntryCell(target, out IntVec3 _);
         }
 
         protected override bool TryExecuteWorker(IncidentParms parms)

@@ -17,5 +17,18 @@
 			</li>
 		</stages>
 	</ThoughtDef>
+	
+	<ThoughtDef>
+		<defName>BotchJob_UndeadRevival</defName>
+		<showBubble>true</showBubble>
+		<durationDays>60</durationDays>
+		<stages>
+			<li>
+				<label>shouldn't be alive...</label>
+				<description>Life has left me, yet I remain. A cursed existence.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 
 </Defs>

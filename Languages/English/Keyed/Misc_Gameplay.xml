@@ -2,12 +2,18 @@
 <LanguageData>
 
   
-  <EggProgress>Progress</EggProgress>
-  <HatchesIn>Time left</HatchesIn>
-  <BotchJob_LuminousDustProduction>Luminous dust production</BotchJob_LuminousDustProduction>
-  <LetterLabelBotchJob_WanderingUndead>Wandering undead</LetterLabelBotchJob_WanderingUndead>
+	<EggProgress>Progress</EggProgress>
+	<HatchesIn>Time left</HatchesIn>
+	<BotchJob_LuminousDustProduction>Luminous dust production</BotchJob_LuminousDustProduction>
+	<LetterLabelBotchJob_WanderingUndead>Wandering undead</LetterLabelBotchJob_WanderingUndead>
 	<LetterBotchJob_WanderingUndead>A horde of undead creatures are passing though the area.\n\nThey don't seem to notice us and should should leave the area soon if left unprovoked.\n\nUndead creatures are very dangerous but can be harvested for rare crafting components if killed.</LetterBotchJob_WanderingUndead>
 	<LetterLabelBotchJob_WanderingUndeadDragon>Wandering undead dragon</LetterLabelBotchJob_WanderingUndeadDragon>
 	<LetterBotchJob_WanderingUndeadDragon>An undead dragon is passing through the area.\n\nDragons are extremely dangerous and unpredictable creatures, one that has somehow defied death is likely to be even more so. It would probably be wise to avoid it unless we are very prepared.\n\nThe undead dragon should leave the area soon if left unprovoked.</LetterBotchJob_WanderingUndeadDragon>
+	
+	<LetterLabelBestowedCurse>Curse Bestowed</LetterLabelBestowedCurse>
+	<LetterTextBestowedCurse>{CASTER_nameDef} has bestowed a curse upon {TARGET_nameDef}, changing them to an undead.\n\n{TARGET_nameDef} will be in a coma for the next {CURSECOMADURATION} and suffer from weakness for an additional {CURSEWEAKNESSDURATION} while {TARGET_possessive} body adjusts to the changes.\n\n{CASTER_nameDef} will suffer from weakness for the next {CURSESHOCKDURATION}.</LetterTextBestowedCurse>
+	
+	<CommandBestowCurse>Bestow Curse</CommandBestowCurse>
+	<CommandBestowCurseDesc>Force this person to implant their xenogenes into another individual using a special injector organ. If this person's genes are currently regrowing, they will die in the process.\n\nWhen implanted, a xenogerm will overwrite the target's xenogenes. Germline genes will be unaffected.</CommandBestowCurseDesc>
 
 </LanguageData>
