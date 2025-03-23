@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<RecipeDef>
+		<defName>BotchJob_Make_WraithOrb</defName>
+		<label>create wraith orb</label>
+		<description>Create a wraith orb.</description>
+		<jobString>Creating wraith orb.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>10000</workAmount>
+		<unfinishedThingDef>BotchJob_UnfinishedAlchemy</unfinishedThingDef>
+		<recipeUsers>
+			<li>BotchJob_ProfaneAlchemyBench</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>BotchJob_ProfanedAdvanced</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BotchJob_LuminousDust</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>BotchJob_LuminousDust</li>
+				<li>Cloth</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BotchJob_WraithOrb>1</BotchJob_WraithOrb>
+		</products>
+		<skillRequirements>
+			<Crafting>3</Crafting>
+			<Intellectual>6</Intellectual>
+		</skillRequirements>
+		<workSkill>Intellectual</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>BotchJob_Make_Bloodstone</defName>
+		<label>create bloodstone</label>
+		<description>Create a bloodstone.</description>
+		<jobString>Creating bloodstone.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>10000</workAmount>
+		<unfinishedThingDef>BotchJob_UnfinishedAlchemy</unfinishedThingDef>
+		<recipeUsers>
+			<li>BotchJob_ProfaneAlchemyBench</li>
+		</recipeUsers>
+		<researchPrerequisites>
+			<li>BotchJob_ProfanedAdvanced</li>
+		</researchPrerequisites>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Silver</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BotchJob_CorruptedBlood</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cloth</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Silver</li>
+				<li>BotchJob_CorruptedBlood</li>
+				<li>Cloth</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BotchJob_Bloodstone>1</BotchJob_Bloodstone>
+		</products>
+		<skillRequirements>
+			<Crafting>3</Crafting>
+			<Intellectual>6</Intellectual>
+		</skillRequirements>
+		<workSkill>Intellectual</workSkill>
+	</RecipeDef>
+
+</Defs>

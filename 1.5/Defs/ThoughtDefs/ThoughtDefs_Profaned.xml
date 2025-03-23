@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>BotchJob_MorbidThoughts</defName>
+		<showBubble>true</showBubble>
+		<durationDays>1</durationDays>
+		<nullifyingTraits>
+			<li>Bloodlust</li>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>morbid thoughts</label>
+				<description>That potion tasted vile and now I can't stop thinking about dead things.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

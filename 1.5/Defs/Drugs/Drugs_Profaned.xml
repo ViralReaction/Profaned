@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==================== Potions =================== -->
+	<ThingDef ParentName="MakeableDrugBase" Name="BotchJob_ProfanePotionBase" Abstract="True">
+		<descriptionHyperlinks>
+			<HediffDef>BotchJob_ProfaneSickness</HediffDef>
+		</descriptionHyperlinks>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>2000</WorkToMake>
+			<MaxHitPoints>60</MaxHitPoints>
+			<DeteriorationRate>5</DeteriorationRate>
+			<Mass>0.50</Mass>
+			<Flammability>0.7</Flammability>
+			<Nutrition>0.1</Nutrition>
+			<Beauty>0</Beauty>
+			<MarketValue>600</MarketValue>
+		</statBases>
+		<recipeMaker>
+			<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+			<workSkill>Intellectual</workSkill>
+			<unfinishedThingDef>BotchJob_UnfinishedAlchemy</unfinishedThingDef>
+			<recipeUsers>
+				<li>BotchJob_ProfaneAlchemyBench</li>
+				<li MayRequire="DankPyon.Medieval.Overhaul">DankPyon_AlchemyBench</li>
+			</recipeUsers>
+			<researchPrerequisite>BotchJob_ProfanedAlchemy</researchPrerequisite>
+			<skillRequirements>
+				<Medicine>4</Medicine>
+				<Intellectual>6</Intellectual>
+			</skillRequirements>
+		</recipeMaker>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<ingestible>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<baseIngestTicks>80</baseIngestTicks>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<tasteThought>BotchJob_MorbidThoughts</tasteThought>
+			<ingestSound MayRequire="Ludeon.RimWorld.Biotech">HemogenPack_Consume</ingestSound>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>BotchJob_ProfaneSickness</hediffDef>
+					<severity>1.00</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Drug"/>
+		</comps>
+	</ThingDef>
+  
+	<!-- ==================== Fury Potion =================== -->
+	<ThingDef ParentName="BotchJob_ProfanePotionBase">
+		<defName>BotchJob_ProfaneFuryPotion</defName>
+		<label>profane fury potion</label>
+		<description>A foul alchemical concoction that increases combat prowess.\n\nPotions created via profane alchemy can bestow powerful, long term effects but will also induce a bout of violent illness and may cause a temporary... affinity with dead things.</description>
+		<descriptionHyperlinks>
+			<HediffDef>BotchJob_ProfaneFuryBuff</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Resource/BotchJob_ProfaneFuryPotion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<costList>
+			<Silver>3</Silver>
+			<BotchJob_ColossusHeart>1</BotchJob_ColossusHeart>
+			<BotchJob_CorruptedBlood>5</BotchJob_CorruptedBlood>
+		</costList>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>BotchJob_ProfaneFuryBuff</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+  
+	<HediffDef>
+		<defName>BotchJob_ProfaneFuryBuff</defName>
+		<label>profane fury</label>
+		<description>Increased melee and ranged combat capabilities.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<MeleeHitChance>0.1</MeleeHitChance>
+					<MeleeArmorPenetration>0.1</MeleeArmorPenetration>
+					<AimingDelayFactor>-0.1</AimingDelayFactor>
+					<RangedWeapon_Cooldown>-0.1</RangedWeapon_Cooldown>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- ==================== Healing potion =================== -->
+	<ThingDef ParentName="BotchJob_ProfanePotionBase">
+		<defName>BotchJob_ProfaneHealingPotion</defName>
+		<label>profane healing potion</label>
+		<description>A foul alchemical concoction that improves healing rate.\n\nPotions created via profane alchemy can bestow powerful, long term effects but will also induce a bout of violent illness and may cause a temporary... affinity with dead things.</description>
+		<descriptionHyperlinks>
+			<HediffDef>BotchJob_ProfaneHealing</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Resource/BotchJob_ProfaneHealingPotion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<costList>
+			<MedicineHerbal>5</MedicineHerbal>
+			<BotchJob_ColossusHeart>1</BotchJob_ColossusHeart>
+			<BotchJob_CorruptedBlood>5</BotchJob_CorruptedBlood>
+		</costList>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>BotchJob_ProfaneHealing</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>BotchJob_ProfaneHealing</defName>
+		<label>profane healing</label>
+		<description>Improved healing rate.</description>
+		<defaultLabelColor>(0.8, 0.6, 0.8)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<InjuryHealingFactor>0.25</InjuryHealingFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- ==================== Haste potion =================== -->
+	<ThingDef ParentName="BotchJob_ProfanePotionBase">
+		<defName>BotchJob_ProfaneHastePotion</defName>
+		<label>profane haste potion</label>
+		<description>A foul alchemical concoction that improves movement speed.\n\nPotions created via profane alchemy can bestow powerful, long term effects but will also induce a bout of violent illness and may cause a temporary... affinity with dead things.</description>
+		<descriptionHyperlinks>
+			<HediffDef>BotchJob_ProfaneHaste</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Resource/BotchJob_ProfaneHastePotion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<costList>
+			<PsychoidLeaves>50</PsychoidLeaves>
+			<BotchJob_ColossusHeart>1</BotchJob_ColossusHeart>
+			<BotchJob_CorruptedBlood>5</BotchJob_CorruptedBlood>
+		</costList>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>BotchJob_ProfaneHaste</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>BotchJob_ProfaneHaste</defName>
+		<label>profane haste</label>
+		<description>Increased movement speed.</description>
+		<defaultLabelColor>(0.8, 0.6, 0.8)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<MoveSpeed>0.25</MoveSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- ==================== Charisma potion =================== -->
+	<ThingDef ParentName="BotchJob_ProfanePotionBase">
+		<defName>BotchJob_ProfaneCharismaPotion</defName>
+		<label>profane charisma potion</label>
+		<description>A foul alchemical concoction that improves social skills.\n\nPotions created via profane alchemy can bestow powerful, long term effects but also induce a bout of violent illness and may cause a temporary... affinity with dead things..</description>
+		<descriptionHyperlinks>
+			<HediffDef>BotchJob_ProfaneCharisma</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Resource/BotchJob_ProfaneCharismaPotion</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.9</drawSize>
+		</graphicData>
+		<costList>
+			<RawHops>30</RawHops>
+			<Gold>2</Gold>
+			<BotchJob_ColossusHeart>1</BotchJob_ColossusHeart>
+			<BotchJob_CorruptedBlood>5</BotchJob_CorruptedBlood>
+		</costList>
+		<ingestible>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>BotchJob_ProfaneCharisma</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>BotchJob_ProfaneCharisma</defName>
+		<label>profane charisma</label>
+		<description>Improved social skills.</description>
+		<defaultLabelColor>(0.8, 0.6, 0.8)</defaultLabelColor>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<statOffsets>
+					<NegotiationAbility>0.25</NegotiationAbility>
+					<TradePriceImprovement>0.25</TradePriceImprovement>
+					<ArrestSuccessChance>0.25</ArrestSuccessChance>
+					<PawnBeauty>1</PawnBeauty>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>1800000</disappearsAfterTicks>
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<!-- ==================== Sickness =================== -->
+	<HediffDef>
+		<defName>BotchJob_ProfaneSickness</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>profane sickness</label>
+		<description>Violent illness as a result of consuming the foul alchemical concoction. The sickness usually passes after around a day.</description>
+		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<makesSickThought>true</makesSickThought>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<vomitMtbDays>0.2</vomitMtbDays>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.2</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<hediffGivers>
+					<li Class="HediffGiver_Random">
+						<hediff>BotchJob_DeathAffinity</hediff>
+						<allowOnLodgers>false</allowOnLodgers>
+						<allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+						<allowOnQuestReservedPawns>false</allowOnQuestReservedPawns>
+						<allowOnBeggars>false</allowOnBeggars>
+						<partsToAffect>
+							<li>Brain</li>
+						</partsToAffect>
+						<mtbDays>4</mtbDays>
+					</li>
+				</hediffGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>BotchJob_DeathAffinity</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>death affinity</label>
+		<description>Can't.. stop... thinking about dead things.</description>
+		<defaultLabelColor>(1,1,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>20000~40000</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<mentalStateGivers>
+					<li>
+						<mentalState>CorpseObsession</mentalState>
+						<mtbDays>0.6</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

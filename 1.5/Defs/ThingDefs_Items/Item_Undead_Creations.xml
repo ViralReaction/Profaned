@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>BotchJob_UnfinishedUndead</defName>
+		<label>unfinished undead creature</label>
+		<description>An unfinished undead creature of some kind.</description>
+		<statBases>
+			<Flammability>2</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Item/Resource/BotchJob_UnfinishedUndead</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories Inherit="false"/>
+	</ThingDef>
+
 	<!-- ========================== "eggs" ================================= -->
 	<ThingDef ParentName="ResourceBase" Name="BotchJob_UndeadCreation" Abstract="True">
 		<techLevel>Medieval</techLevel>

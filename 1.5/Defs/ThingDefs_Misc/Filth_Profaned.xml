@@ -60,5 +60,32 @@
 			<cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
 		</filth>
 	</ThingDef>
+	
+	<ThingDef ParentName="BaseFilth">
+		<defName>BotchJob_BloodstoneFilth</defName>
+		<label>bloodstone residue</label>
+		<description>Highly flammable bloodstone residue.</description>
+		<thingClass>LiquidFuel</thingClass>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<Beauty>-10</Beauty>
+			<Cleanliness>-15</Cleanliness>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>2.0</Flammability>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Filth/BotchJob_Filth_Bloodstone</texPath>
+		</graphicData>
+		<filth>
+			<ignoreFilthMultiplierStat>true</ignoreFilthMultiplierStat>
+			<disappearsInDays>35~40</disappearsInDays>
+			<rainWashes>true</rainWashes>
+			<cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+			<canFilthAttach>true</canFilthAttach>
+			<maxThickness>1</maxThickness>
+			<cleaningSound>Interact_CleanFilth_Dirt</cleaningSound>
+		</filth>
+	</ThingDef>
 
 </Defs>

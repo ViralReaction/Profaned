@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DamageDef ParentName="Flame">
+		<defName>BotchJob_BloodflameExplosion</defName>
+		<label>bloodflame</label>
+		<deathMessage>{0} has been incinerated by bloodflame.</deathMessage>
+		<defaultDamage>25</defaultDamage>
+		<explosionHeatEnergyPerCell>30</explosionHeatEnergyPerCell>
+		<explosionColorCenter>(1, 0.4, 0.4)</explosionColorCenter>
+		<explosionColorEdge>(1, 0.7, 0.7)</explosionColorEdge>
+	</DamageDef>
+
+</Defs>
