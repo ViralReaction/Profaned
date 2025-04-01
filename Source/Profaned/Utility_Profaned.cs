@@ -37,28 +37,33 @@ namespace Profaned
             caster.health.AddHediff(hediffOnCaster, null, null, null);
 
         }
-        public static bool SameXenotype(Pawn pawn, Pawn caster, XenotypeDef xenotype)
+        public static bool CurseXenotypCheck(Pawn pawn, Pawn caster, XenotypeDef xenotype, out Pawn_GeneTracker pawnGenes)
         {
-            var pawnGenes = pawn?.genes;
-            var casterGenes = caster?.genes;
-            if (pawnGenes == null || casterGenes == null)
+            pawnGenes = pawn?.genes;
+            if (pawnGenes == null)
             {
                 return false;
             }
             if (!pawnGenes.UniqueXenotype)
             {
-                return pawnGenes.Xenotype == xenotype || pawnGenes.Xenotype == casterGenes.Xenotype;
+                return pawnGenes.Xenotype == xenotype;
             }
-            if (casterGenes.UniqueXenotype)
-            {
-                var pawnCustomXenotype = pawnGenes.CustomXenotype;
-                var casterCustomXenotype = casterGenes.CustomXenotype;
+            return false;
+        }
 
-                if (pawnCustomXenotype != null && casterCustomXenotype != null)
-                {
-                    return pawnCustomXenotype.name == casterCustomXenotype.name;
-                }
+        public static bool CurseGeneCheck(Pawn_GeneTracker pawnGenes)
+        {
+            if (pawnGenes == null)
+            {
                 return false;
+            }
+            foreach (var gene in pawnGenes.GenesListForReading)
+            {
+                if (gene.def == DefOf_Profaned.BotchJob_Cursebearer)
+                {
+                    return true;
+                }
+
             }
             return false;
         }

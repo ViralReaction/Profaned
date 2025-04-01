@@ -94,11 +94,19 @@ namespace Profaned
                 Log.Error($"Profaned: {this.parent.def} is missing required mod extension");
                 return false;
             }
-            if (Utility_Profaned.SameXenotype(pawn, this.parent.pawn, modExtension.xenotypeDef))
+            if (Utility_Profaned.CurseXenotypCheck(pawn, this.parent.pawn, modExtension.xenotypeDef, out Pawn_GeneTracker pawnGenes))
             {
                 if (throwMessages)
                 {
                     Messages.Message("MessageCannotUseOnUndead".Translate(pawn), pawn, MessageTypeDefOf.RejectInput, false);
+                }
+                return false;
+            }
+            if (Utility_Profaned.CurseGeneCheck(pawnGenes))
+            {
+                if (throwMessages)
+                {
+                    Messages.Message("MessageCannotUseAlreadyCursed".Translate(pawn), pawn, MessageTypeDefOf.RejectInput, false);
                 }
                 return false;
             }
@@ -107,10 +115,6 @@ namespace Profaned
 
         public override IEnumerable<Mote> CustomWarmupMotes(LocalTargetInfo target)
         {
-            if (target.HasThing && target.Thing is Corpse corpse)
-            {
-                yield return MoteMaker.MakeAttachedOverlay(corpse, ThingDefOf.Mote_XenogermImplantation, new Vector3(0f, 0f, 0.3f), 1f, -1f);
-            }
             yield break;
         }
 
